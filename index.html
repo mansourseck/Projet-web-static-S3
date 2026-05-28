@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mamadou Mansor Seck — Portfolio Réseaux & Infrastructure IT</title>
+<meta name="description" content="Portfolio de Mamadou Mansor Seck — Étudiant L3 Réseaux ISI Keur Massar. pfSense, VLAN, Active Directory, Proxmox, Asterisk, Virtualisation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.237 4.237 0 00-6 0zm-4-4l2 2a7.074 7.074 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg></div>
+      <span class="nav-logo-text"><span>MMS</span> · NetInfra</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#topology">Topologies</a>
+      <a href="#security">Sécurité</a>
+      <a href="#cloud">Cloud</a>
+      <a href="#docs">Docs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div><div class="hero-orb hero-orb-2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><div class="hero-badge-dot">🎓</div>Étudiant L3 Réseaux Informatiques · ISI Dakar</div>
+      <h1 class="hero-title">Mamadou<br><span class="underline-gold">Mansor</span><br><span class="blue">Seck</span></h1>
+      <p class="hero-sub">pfSense · <span class="mono-tag">VLAN</span> · Active Directory<br>Proxmox · Asterisk · GNS3 · Docker</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Voir les projets
+        </a>
+        <a href="assets/CV-Mamadou-Mansor-Seck.pdf" download class="btn btn-gold">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Télécharger CV
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num" id="hstat1">0<span>+</span></div><div class="hero-stat-label">Projets réalisés</div></div>
+        <div><div class="hero-stat-num" id="hstat2">0<span>+</span></div><div class="hero-stat-label">Technologies</div></div>
+        <div><div class="hero-stat-num" id="hstat3">0<span>an</span></div><div class="hero-stat-label">Expérience pro</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-diagram">
+        <div class="diagram-header">
+          <span class="diagram-title">Topologie réseau · MLT SA — Stage IT 2025</span>
+          <div class="diagram-dots"><span></span><span></span><span></span></div>
+        </div>
+        <svg class="topo-svg" viewBox="0 0 480 285" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="g1"><feGaussianBlur stdDeviation="3" result="cb"/><feMerge><feMergeNode in="cb"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <marker id="arr1" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0461C5" opacity="0.7"/></marker>
+          </defs>
+          <rect width="480" height="285" fill="#f4f8ff" rx="8"/>
+          <!-- Internet -->
+          <ellipse cx="240" cy="18" rx="55" ry="12" fill="#e8f1fd" stroke="#0461C5" stroke-width="1.2" stroke-dasharray="5,3"/>
+          <text x="240" y="22" text-anchor="middle" fill="#0461C5" font-size="7.5" font-family="DM Mono,monospace" font-weight="600">INTERNET / WAN</text>
+          <!-- pfSense -->
+          <line x1="240" y1="30" x2="240" y2="52" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <rect x="192" y="52" width="96" height="28" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+          <text x="240" y="64" text-anchor="middle" fill="#ef4444" font-size="7.5" font-family="DM Mono,monospace" font-weight="700">pfSense FW</text>
+          <text x="240" y="74" text-anchor="middle" fill="#dc2626" font-size="6" font-family="DM Mono,monospace">Portail captif · Filtrage · NAT</text>
+          <!-- Core switch -->
+          <line x1="240" y1="80" x2="240" y2="102" stroke="#0461C5" stroke-width="1.5" marker-end="url(#arr1)"/>
+          <rect x="196" y="102" width="88" height="28" rx="6" fill="#0461C5" filter="url(#g1)"/>
+          <text x="240" y="114" text-anchor="middle" fill="#fff" font-size="7.5" font-family="DM Mono,monospace" font-weight="700">CORE SWITCH</text>
+          <text x="240" y="124" text-anchor="middle" fill="#a0c4ff" font-size="6" font-family="DM Mono,monospace">Cisco · Trunk 802.1Q</text>
+          <!-- Branches -->
+          <line x1="220" y1="130" x2="95" y2="158" stroke="#0461C5" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+          <line x1="240" y1="130" x2="240" y2="158" stroke="#0461C5" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+          <line x1="260" y1="130" x2="385" y2="158" stroke="#0461C5" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+          <!-- SW-Admin -->
+          <rect x="58" y="158" width="74" height="26" rx="5" fill="#0a7cff"/>
+          <text x="95" y="169" text-anchor="middle" fill="#fff" font-size="7" font-family="DM Mono,monospace" font-weight="600">SW-Admin</text>
+          <text x="95" y="179" text-anchor="middle" fill="#a0c4ff" font-size="6" font-family="DM Mono,monospace">VLAN 10</text>
+          <!-- SW-Ops -->
+          <rect x="203" y="158" width="74" height="26" rx="5" fill="#0a7cff"/>
+          <text x="240" y="169" text-anchor="middle" fill="#fff" font-size="7" font-family="DM Mono,monospace" font-weight="600">SW-Ops</text>
+          <text x="240" y="179" text-anchor="middle" fill="#a0c4ff" font-size="6" font-family="DM Mono,monospace">VLAN 20</text>
+          <!-- SW-Srv -->
+          <rect x="348" y="158" width="74" height="26" rx="5" fill="#0a7cff"/>
+          <text x="385" y="169" text-anchor="middle" fill="#fff" font-size="7" font-family="DM Mono,monospace" font-weight="600">SW-Serveurs</text>
+          <text x="385" y="179" text-anchor="middle" fill="#a0c4ff" font-size="6" font-family="DM Mono,monospace">VLAN 30</text>
+          <!-- Leaves -->
+          <line x1="78" y1="184" x2="52" y2="204"/><line x1="112" y1="184" x2="138" y2="204"/>
+          <line x1="220" y1="184" x2="194" y2="204"/><line x1="260" y1="184" x2="286" y2="204"/>
+          <line x1="366" y1="184" x2="340" y2="204"/><line x1="404" y1="184" x2="430" y2="204"/>
+          <rect x="22" y="204" width="60" height="22" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+          <text x="52" y="213" text-anchor="middle" fill="#166534" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">PC Admin</text>
+          <text x="52" y="221" text-anchor="middle" fill="#22c55e" font-size="6" font-family="DM Mono,monospace">VLAN 10</text>
+          <rect x="108" y="204" width="60" height="22" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+          <text x="138" y="213" text-anchor="middle" fill="#166534" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">Imprimante</text>
+          <text x="138" y="221" text-anchor="middle" fill="#22c55e" font-size="6" font-family="DM Mono,monospace">VLAN 10</text>
+          <rect x="164" y="204" width="60" height="22" rx="4" fill="#fefce8" stroke="#FFC700" stroke-width="1.2"/>
+          <text x="194" y="213" text-anchor="middle" fill="#92400e" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">PC Ops</text>
+          <text x="194" y="221" text-anchor="middle" fill="#ca8a04" font-size="6" font-family="DM Mono,monospace">VLAN 20</text>
+          <rect x="256" y="204" width="60" height="22" rx="4" fill="#fefce8" stroke="#FFC700" stroke-width="1.2"/>
+          <text x="286" y="213" text-anchor="middle" fill="#92400e" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">Scanner</text>
+          <text x="286" y="221" text-anchor="middle" fill="#ca8a04" font-size="6" font-family="DM Mono,monospace">VLAN 20</text>
+          <rect x="310" y="204" width="60" height="22" rx="4" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+          <text x="340" y="213" text-anchor="middle" fill="#6b21a8" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">SRV-WAMP</text>
+          <text x="340" y="221" text-anchor="middle" fill="#a855f7" font-size="6" font-family="DM Mono,monospace">VLAN 30</text>
+          <rect x="400" y="204" width="60" height="22" rx="4" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+          <text x="430" y="213" text-anchor="middle" fill="#6b21a8" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">NAS Backup</text>
+          <text x="430" y="221" text-anchor="middle" fill="#a855f7" font-size="6" font-family="DM Mono,monospace">VLAN 30</text>
+          <!-- Status dots -->
+          <circle cx="54" cy="165" r="4" fill="#22c55e"/><circle cx="199" cy="165" r="4" fill="#22c55e"/><circle cx="344" cy="165" r="4" fill="#FFC700"/>
+          <!-- Legend -->
+          <rect x="10" y="250" width="460" height="26" rx="5" fill="rgba(4,97,197,0.05)" stroke="#0461C5" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <text x="240" y="264" text-anchor="middle" fill="#0461C5" font-size="7" font-family="DM Mono,monospace">Active Directory · GPO · DHCP · DNS · pfSense — Stage MLT SA (Août–Oct 2025)</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Profile -->
+      <div class="about-profile aos">
+        <div class="profile-avatar"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div>
+        <div class="profile-name">Mamadou Mansor Seck</div>
+        <div class="profile-role">Étudiant L3 Réseaux Informatiques · ISI Keur Massar</div>
+        <p class="profile-bio">Passionné par l'infrastructure réseau, la cybersécurité et les solutions open source. Diplômé BT Informatique (Mauritanie, 2022) et en Licence Réseaux à l'ISI depuis 2023. Stage IT chez MLT SA (Dakar, 2025).</p>
+        <div class="profile-divider"></div>
+        <div class="profile-info-row">
+          <div class="profile-info-icon"><svg viewBox="0 0 24 24" fill="var(--blue)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <span class="profile-info-text">Yeumbeul Cité Comico, Dakar, Sénégal</span>
+        </div>
+        <div class="profile-info-row">
+          <div class="profile-info-icon"><svg viewBox="0 0 24 24" fill="var(--blue)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+          <span class="profile-info-text">+221 77 228 54 52</span>
+        </div>
+        <div class="profile-info-row">
+          <div class="profile-info-icon"><svg viewBox="0 0 24 24" fill="var(--blue)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <span class="profile-info-text">mohamedseck163@gmail.com</span>
+        </div>
+        <div class="profile-info-row">
+          <div class="profile-info-icon"><svg viewBox="0 0 24 24" fill="var(--blue)"><path d="M12 3L1 9l4 2.18V17h2v-4.82L9 13.36V17c0 1.1 1.34 2 3 2s3-.9 3-2v-3.64l5-2.18V17h2v-5.82L23 9 12 3z"/></svg></div>
+          <span class="profile-info-text">ISI Keur Massar — L3 Réseaux (2023 → aujourd'hui)</span>
+        </div>
+        <div class="profile-info-row">
+          <div class="profile-info-icon"><svg viewBox="0 0 24 24" fill="var(--blue)"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3z"/></svg></div>
+          <span class="profile-info-text">CCNA1 Cisco (obtenu) · BT Informatique MIFFIT</span>
+        </div>
+        <div class="profile-divider"></div>
+        <div class="profile-langs">
+          <div class="profile-lang"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span><span class="lang-level">Courant</span></div>
+          <div class="profile-lang"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arabe</span><span class="lang-level">Courant</span></div>
+          <div class="profile-lang"><span class="lang-flag">🇬🇧</span><span class="lang-name">Anglais</span><span class="lang-level">Débutant</span></div>
+          <div class="profile-lang"><span class="lang-flag">🌍</span><span class="lang-name">Wolof</span><span class="lang-level">Conversationnel</span></div>
+        </div>
+        <div class="profile-divider"></div>
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-card-num" id="stat1">0</div><div class="stat-card-label">Projets IT</div></div>
+          <div class="stat-card"><div class="stat-card-num" id="stat2">0</div><div class="stat-card-label">Technologies</div></div>
+          <div class="stat-card"><div class="stat-card-num" id="stat3">0</div><div class="stat-card-label">Certification</div></div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="skills-section">
+        <div class="skills-header aos">
+          <div class="section-label">À PROPOS</div>
+          <h2 class="section-title">Compétences<br>& Expertises</h2>
+          <p class="section-sub">Infrastructure réseau, administration systèmes, virtualisation, cybersécurité et développement — une stack complète construite projet par projet.</p>
+        </div>
+
+        <!-- Experience -->
+        <div class="xp-card aos d1">
+          <div class="xp-logo">MLT</div>
+          <div>
+            <div class="xp-title">Stagiaire — Technicien Support IT</div>
+            <div class="xp-company">MLT SA · Manutention Logistique Transport · Dakar</div>
+            <div class="xp-date">📅 Août 2025 → Octobre 2025</div>
+            <ul class="xp-list">
+              <li>Maintenance matérielle : imprimantes, scanners, câblage réseau, Wi-Fi</li>
+              <li>Administration réseau : switches, routeurs, points d'accès, résolution de connectivité</li>
+              <li>Développement app web PHP/MySQL — Gestion Achat &amp; Approvisionnement</li>
+              <li>Déploiement WAMP local, configuration virtual hosts, sécurisation des accès</li>
+              <li>Présentation solution ERP Odoo + système géolocalisation véhicules</li>
+              <li>Enregistrement données pesée camions au pont bascule du Môle 1</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="skill-category aos d1">
+          <div class="skill-cat-label">🖧 Systèmes &amp; Réseaux</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="dot blue"></span>Adressage IP / VLAN</div>
+            <div class="skill-chip"><span class="dot blue"></span>DHCP / DNS</div>
+            <div class="skill-chip"><span class="dot blue"></span>Windows Server / AD / GPO</div>
+            <div class="skill-chip"><span class="dot blue"></span>Cisco Packet Tracer</div>
+            <div class="skill-chip"><span class="dot blue"></span>GNS3 / EVE-NG</div>
+            <div class="skill-chip"><span class="dot blue"></span>Câblage &amp; Continuité</div>
+            <div class="skill-chip"><span class="dot blue"></span>CCNA1 Cisco</div>
+            <div class="skill-chip"><span class="dot blue"></span>Déploiement Windows 11 via AD</div>
+          </div>
+        </div>
+
+        <div class="skill-category aos d2">
+          <div class="skill-cat-label">🔒 Cybersécurité &amp; Firewall</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="dot gold"></span>pfSense — Portail captif</div>
+            <div class="skill-chip"><span class="dot gold"></span>pfSense — Filtrage réseau</div>
+            <div class="skill-chip"><span class="dot gold"></span>pfSense — Firewall / NAT</div>
+            <div class="skill-chip"><span class="dot gold"></span>Téléphonie IP — Asterisk</div>
+            <div class="skill-chip"><span class="dot gold"></span>NGINX / Apache</div>
+            <div class="skill-chip"><span class="dot gold"></span>DevNet — Automatisation</div>
+          </div>
+        </div>
+
+        <div class="skill-category aos d3">
+          <div class="skill-cat-label">🖥️ Virtualisation &amp; Linux</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="dot green"></span>VMware vSphere / ESXi</div>
+            <div class="skill-chip"><span class="dot green"></span>Proxmox VE</div>
+            <div class="skill-chip"><span class="dot green"></span>VirtualBox</div>
+            <div class="skill-chip"><span class="dot green"></span>Docker</div>
+            <div class="skill-chip"><span class="dot green"></span>Debian / Ubuntu</div>
+            <div class="skill-chip"><span class="dot green"></span>AlmaLinux / Rocky Linux</div>
+          </div>
+        </div>
+
+        <div class="skill-category aos d3">
+          <div class="skill-cat-label">💻 Langages &amp; Développement</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="dot purple"></span>HTML / CSS</div>
+            <div class="skill-chip"><span class="dot purple"></span>PHP</div>
+            <div class="skill-chip"><span class="dot purple"></span>Python (base)</div>
+            <div class="skill-chip"><span class="dot purple"></span>Java (base)</div>
+            <div class="skill-chip"><span class="dot purple"></span>C</div>
+            <div class="skill-chip"><span class="dot purple"></span>MySQL / Oracle DB</div>
+            <div class="skill-chip"><span class="dot purple"></span>WordPress</div>
+            <div class="skill-chip"><span class="dot purple"></span>WAMP / NGINX</div>
+          </div>
+        </div>
+
+        <div class="skill-category aos d4">
+          <div class="skill-cat-label">📋 Outils &amp; Gestion de projets</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="dot orange"></span>ClickUp</div>
+            <div class="skill-chip"><span class="dot orange"></span>Trello</div>
+            <div class="skill-chip"><span class="dot orange"></span>Notion</div>
+            <div class="skill-chip"><span class="dot orange"></span>Git / GitHub</div>
+            <div class="skill-chip"><span class="dot orange"></span>VSCode</div>
+            <div class="skill-chip"><span class="dot orange"></span>Draw.io</div>
+            <div class="skill-chip"><span class="dot orange"></span>Pitch / PowerPoint</div>
+            <div class="skill-chip"><span class="dot orange"></span>Word / Excel</div>
+          </div>
+        </div>
+
+        <div class="softskills-row aos d4">
+          <div class="soft-chip">🎯 Rigueur &amp; Organisation</div>
+          <div class="soft-chip">🔍 Analyse &amp; Résolution</div>
+          <div class="soft-chip">🤝 Travail en équipe</div>
+          <div class="soft-chip">⚡ Autonomie &amp; Initiative</div>
+          <div class="soft-chip">🔄 Adaptabilité</div>
+          <div class="soft-chip">📚 Apprentissage continu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="projects-header aos">
+      <div class="section-label">PROJETS RÉALISÉS</div>
+      <h2 class="section-title">Réalisations &amp;<br>Architectures</h2>
+      <p class="section-sub">Projets concrets développés à l'ISI Dakar et lors du stage MLT SA — infrastructure, sécurité, virtualisation et développement.</p>
+    </div>
+    <div class="project-filters aos d1">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="securite">Sécurité</button>
+      <button class="filter-btn" data-filter="systemes">Systèmes</button>
+      <button class="filter-btn" data-filter="virtualisation">Virtualisation</button>
+      <button class="filter-btn" data-filter="dev">Développement</button>
+    </div>
+    <div class="projects-grid">
+
+      <!-- P1 pfSense -->
+      <div class="project-card aos" data-category="securite">
+        <div class="project-img" style="background:linear-gradient(135deg,#fef2f2,#fecaca)">
+          <svg width="160" height="120" viewBox="0 0 160 120">
+            <ellipse cx="80" cy="14" rx="45" ry="11" fill="#fef2f2" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,3"/>
+            <text x="80" y="18" text-anchor="middle" fill="#ef4444" font-size="7" font-family="DM Mono,monospace">INTERNET</text>
+            <path d="M80 27 L65 33 L65 51 Q65 62 80 67 Q95 62 95 51 L95 33 Z" fill="#ef4444" opacity="0.9"/>
+            <text x="80" y="44" text-anchor="middle" fill="#fff" font-size="7.5" font-family="DM Mono,monospace" font-weight="700">pf</text>
+            <text x="80" y="55" text-anchor="middle" fill="#fff" font-size="7.5" font-family="DM Mono,monospace" font-weight="700">Sense</text>
+            <line x1="80" y1="67" x2="80" y2="79" stroke="#374151" stroke-width="1.5"/>
+            <rect x="50" y="79" width="60" height="13" rx="4" fill="#0461C5"/>
+            <text x="80" y="88" text-anchor="middle" fill="#fff" font-size="7" font-family="DM Mono,monospace" font-weight="600">CORE SWITCH</text>
+            <line x1="65" y1="92" x2="35" y2="106"/><line x1="80" y1="92" x2="80" y2="106"/><line x1="95" y1="92" x2="125" y2="106"/>
+            <rect x="12" y="106" width="46" height="10" rx="3" fill="#dcfce7" stroke="#22c55e" stroke-width="1"/>
+            <text x="35" y="113" text-anchor="middle" fill="#166534" font-size="6" font-family="DM Mono,monospace">LAN Admin</text>
+            <rect x="57" y="106" width="46" height="10" rx="3" fill="#fefce8" stroke="#FFC700" stroke-width="1"/>
+            <text x="80" y="113" text-anchor="middle" fill="#92400e" font-size="6" font-family="DM Mono,monospace">LAN Ops</text>
+            <rect x="102" y="106" width="46" height="10" rx="3" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+            <text x="125" y="113" text-anchor="middle" fill="#991b1b" font-size="6" font-family="DM Mono,monospace">Wi-Fi Captif</text>
+          </svg>
+          <div class="project-img-overlay"><span>Voir le projet →</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-complexity high"><div class="complexity-dots"><span></span><span></span><span></span></div><span>Complexité élevée</span></div>
+          <div class="project-name">Portail Captif pfSense</div>
+          <p class="project-desc">Déploiement pfSense avec portail captif pour authentifier les utilisateurs avant l'accès Internet. Filtrage réseau, zones DMZ et NAT configurés.</p>
+          <div class="project-techs"><span class="project-tech">pfSense</span><span class="project-tech">Portail captif</span><span class="project-tech">VLAN</span><span class="project-tech">Firewall</span><span class="project-tech">NAT</span></div>
+          <div class="project-footer">
+            <div class="tag">Cybersécurité</div>
+            <button class="project-detail-btn" onclick="openModal('modal-p1')">Voir détails →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- P2 Active Directory -->
+      <div class="project-card aos d1" data-category="systemes">
+        <div class="project-img" style="background:linear-gradient(135deg,#eff6ff,#bfdbfe)">
+          <svg width="160" height="120" viewBox="0 0 160 120">
+            <rect x="45" y="8" width="70" height="24" rx="6" fill="#0461C5"/>
+            <text x="80" y="19" text-anchor="middle" fill="#fff" font-size="7" font-family="DM Mono,monospace" font-weight="700">Windows Server</text>
+            <text x="80" y="28" text-anchor="middle" fill="#a0c4ff" font-size="6" font-family="DM Mono,monospace">Active Directory · GPO</text>
+            <line x1="55" y1="32" x2="30" y2="55"/><line x1="80" y1="32" x2="80" y2="55"/><line x1="105" y1="32" x2="130" y2="55"/>
+            <rect x="8" y="55" width="44" height="18" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="30" y="65" text-anchor="middle" fill="#1e40af" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">OU Direction</text>
+            <text x="30" y="69" text-anchor="middle" fill="#3b82f6" font-size="5.5" font-family="DM Mono,monospace">GPO</text>
+            <rect x="58" y="55" width="44" height="18" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+            <text x="80" y="65" text-anchor="middle" fill="#166534" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">OU Employés</text>
+            <text x="80" y="69" text-anchor="middle" fill="#22c55e" font-size="5.5" font-family="DM Mono,monospace">GPO</text>
+            <rect x="108" y="55" width="44" height="18" rx="4" fill="#fefce8" stroke="#FFC700" stroke-width="1.2"/>
+            <text x="130" y="65" text-anchor="middle" fill="#92400e" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">OU IT Admin</text>
+            <text x="130" y="69" text-anchor="middle" fill="#ca8a04" font-size="5.5" font-family="DM Mono,monospace">GPO</text>
+            <rect x="15" y="80" width="130" height="14" rx="4" fill="#0461C5" opacity="0.08" stroke="#0461C5" stroke-width="0.8" stroke-dasharray="3,2"/>
+            <text x="80" y="90" text-anchor="middle" fill="#0461C5" font-size="6.5" font-family="DM Mono,monospace">Déploiement auto Windows 11 via WDS</text>
+            <line x1="30" y1="73" x2="30" y2="80"/><line x1="80" y1="73" x2="80" y2="80"/><line x1="130" y1="73" x2="130" y2="80"/>
+            <rect x="8" y="96" width="40" height="14" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="1"/>
+            <text x="28" y="105" text-anchor="middle" fill="#4338ca" font-size="6" font-family="DM Mono,monospace">Win11 × 8</text>
+            <rect x="60" y="96" width="40" height="14" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="1"/>
+            <text x="80" y="105" text-anchor="middle" fill="#4338ca" font-size="6" font-family="DM Mono,monospace">Win11 × 15</text>
+            <rect x="112" y="96" width="40" height="14" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="1"/>
+            <text x="132" y="105" text-anchor="middle" fill="#4338ca" font-size="6" font-family="DM Mono,monospace">Win11 × 5</text>
+          </svg>
+          <div class="project-img-overlay"><span>Voir le projet →</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-complexity high"><div class="complexity-dots"><span></span><span></span><span></span></div><span>Complexité élevée</span></div>
+          <div class="project-name">Active Directory &amp; Déploiement Win 11</div>
+          <p class="project-desc">Mise en place d'un domaine AD complet avec OUs, GPO et déploiement automatisé de Windows 11 via WDS sur l'ensemble du parc informatique.</p>
+          <div class="project-techs"><span class="project-tech">Windows Server</span><span class="project-tech">Active Directory</span><span class="project-tech">GPO</span><span class="project-tech">WDS</span></div>
+          <div class="project-footer">
+            <div class="tag">Administration Systèmes</div>
+            <button class="project-detail-btn" onclick="openModal('modal-p2')">Voir détails →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 Proxmox -->
+      <div class="project-card aos d2" data-category="virtualisation">
+        <div class="project-img" style="background:linear-gradient(135deg,#f0fdf4,#bbf7d0)">
+          <svg width="160" height="120" viewBox="0 0 160 120">
+            <rect x="8" y="8" width="144" height="100" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="80" y="22" text-anchor="middle" fill="#22c55e" font-size="8" font-family="DM Mono,monospace" font-weight="700">PROXMOX VE / ESXi</text>
+            <rect x="14" y="28" width="62" height="26" rx="5" fill="#0461C5" opacity="0.9"/>
+            <text x="45" y="40" text-anchor="middle" fill="#fff" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">VM-Debian</text>
+            <text x="45" y="50" text-anchor="middle" fill="#a0c4ff" font-size="5.5" font-family="DM Mono,monospace">NGINX · DNS</text>
+            <rect x="84" y="28" width="62" height="26" rx="5" fill="#0461C5" opacity="0.9"/>
+            <text x="115" y="40" text-anchor="middle" fill="#fff" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">VM-Ubuntu</text>
+            <text x="115" y="50" text-anchor="middle" fill="#a0c4ff" font-size="5.5" font-family="DM Mono,monospace">DHCP · WAMP</text>
+            <rect x="14" y="60" width="62" height="26" rx="5" fill="#7c3aed" opacity="0.85"/>
+            <text x="45" y="72" text-anchor="middle" fill="#fff" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">VM-WinSrv</text>
+            <text x="45" y="82" text-anchor="middle" fill="#e9d5ff" font-size="5.5" font-family="DM Mono,monospace">AD · GPO · DNS</text>
+            <rect x="84" y="60" width="62" height="26" rx="5" fill="#ea580c" opacity="0.85"/>
+            <text x="115" y="72" text-anchor="middle" fill="#fff" font-size="6.5" font-family="DM Mono,monospace" font-weight="600">VM-Debian</text>
+            <text x="115" y="82" text-anchor="middle" fill="#fed7aa" font-size="5.5" font-family="DM Mono,monospace">Asterisk SIP</text>
+            <rect x="42" y="90" width="76" height="14" rx="4" fill="#FFC700" opacity="0.15" stroke="#FFC700" stroke-width="0.8"/>
+            <text x="80" y="99" text-anchor="middle" fill="#92400e" font-size="6" font-family="DM Mono,monospace">AlmaLinux · Rocky Linux</text>
+          </svg>
+          <div class="project-img-overlay"><span>Voir le projet →</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-complexity high"><div class="complexity-dots"><span></span><span></span><span></span></div><span>Complexité élevée</span></div>
+          <div class="project-name">Virtualisation des Serveurs</div>
+          <p class="project-desc">Infrastructure virtualisée avec Proxmox VE et VMware ESXi. Déploiement de 5 VMs simultanées : Debian, Ubuntu, Windows Server, AlmaLinux, Rocky Linux.</p>
+          <div class="project-techs"><span class="project-tech">Proxmox VE</span><span class="project-tech">VMware ESXi</span><span class="project-tech">VirtualBox</span><span class="project-tech">Docker</span></div>
+          <div class="project-footer">
+            <div class="tag">Virtualisation</div>
+            <button class="project-detail-btn" onclick="openModal('modal-p3')">Voir détails →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- P4 App PHP -->
+      <div class="project-card aos d1" data-category="dev">
+        <div class="project-img" style="background:linear-gradient(135deg,#faf5ff,#ede9fe)">
+          <svg width="160" height="120" viewBox="0 0 160 120">
+            <rect x="8" y="6" width="144" height="108" rx="7" fill="#fff" stroke="#a855f7" stroke-width="1.2"/>
+            <rect x="8" y="6" width="144" height="20" rx="7" fill="#a855f7"/>
+            <rect x="8" y="18" width="144" height="8" fill="#a855f7"/>
+            <circle cx="20" cy="16" r="3" fill="#fecaca"/><circle cx="30" cy="16" r="3" fill="#fef08a"/><circle cx="40" cy="16" r="3" fill="#bbf7d0"/>
+            <text x="80" y="20" text-anchor="middle" fill="#fff" font-size="7.5" font-family="DM Mono,monospace" font-weight="700">Gestion Achat &amp; Approvisionnement</text>
+            <rect x="16" y="30" width="128" height="9" rx="3" fill="#f3e8ff" stroke="#a855f7" stroke-width="0.8"/>
+            <text x="80" y="37" text-anchor="middle" fill="#6b21a8" font-size="6" font-family="DM Mono,monospace">🔍 Rechercher un bon de commande...</text>
+            <rect x="16" y="43" width="128" height="6" rx="2" fill="#a855f7" opacity="0.12"/>
+            <text x="24" y="48" fill="#6b21a8" font-size="5.5" font-family="DM Mono,monospace">ID</text>
+            <text x="45" y="48" fill="#6b21a8" font-size="5.5" font-family="DM Mono,monospace">Produit</text>
+            <text x="100" y="48" fill="#6b21a8" font-size="5.5" font-family="DM Mono,monospace">Qté</text>
+            <text x="125" y="48" fill="#6b21a8" font-size="5.5" font-family="DM Mono,monospace">Statut</text>
+            <rect x="16" y="49" width="128" height="8" fill="#fafafa" stroke="#e5e7eb" stroke-width="0.5"/>
+            <text x="24" y="55" fill="#374151" font-size="5" font-family="DM Mono,monospace">001</text>
+            <text x="45" y="55" fill="#374151" font-size="5" font-family="DM Mono,monospace">Câble Cat6 (100m)</text>
+            <text x="100" y="55" fill="#374151" font-size="5" font-family="DM Mono,monospace">50</text>
+            <rect x="120" y="50" width="18" height="5" rx="2" fill="#dcfce7"/>
+            <text x="129" y="54" text-anchor="middle" fill="#166534" font-size="4.5" font-family="DM Mono,monospace">Livré</text>
+            <rect x="16" y="57" width="128" height="8" fill="#fafafa" stroke="#e5e7eb" stroke-width="0.5"/>
+            <text x="24" y="63" fill="#374151" font-size="5" font-family="DM Mono,monospace">002</text>
+            <text x="45" y="63" fill="#374151" font-size="5" font-family="DM Mono,monospace">Switch Cisco 24P</text>
+            <text x="100" y="63" fill="#374151" font-size="5" font-family="DM Mono,monospace">3</text>
+            <rect x="120" y="58" width="18" height="5" rx="2" fill="#fefce8"/>
+            <text x="129" y="62" text-anchor="middle" fill="#92400e" font-size="4.5" font-family="DM Mono,monospace">En cours</text>
+            <rect x="16" y="72" width="26" height="9" rx="3" fill="#dbeafe"/><text x="29" y="78.5" text-anchor="middle" fill="#1d4ed8" font-size="5.5" font-family="DM Mono,monospace">PHP</text>
+            <rect x="45" y="72" width="32" height="9" rx="3" fill="#fef9c3"/><text x="61" y="78.5" text-anchor="middle" fill="#713f12" font-size="5.5" font-family="DM Mono,monospace">MySQL</text>
+            <rect x="80" y="72" width="32" height="9" rx="3" fill="#dcfce7"/><text x="96" y="78.5" text-anchor="middle" fill="#166534" font-size="5.5" font-family="DM Mono,monospace">JS/CSS</text>
+            <rect x="115" y="72" width="30" height="9" rx="3" fill="#f3e8ff"/><text x="130" y="78.5" text-anchor="middle" fill="#6b21a8" font-size="5.5" font-family="DM Mono,monospace">WAMP</text>
+            <rect x="16" y="85" width="128" height="14" rx="4" fill="#f8faff" stroke="#0461C5" stroke-width="0.8"/>
+            <text x="80" y="93" text-anchor="middle" fill="#0461C5" font-size="6" font-family="DM Mono,monospace">Serveur WAMP · Virtual Host · Auth sécurisée</text>
+            <text x="80" y="109" text-anchor="middle" fill="#6b7280" font-size="5.5" font-family="DM Mono,monospace">Stage MLT SA — Dakar 2025</text>
+          </svg>
+          <div class="project-img-overlay"><span>Voir le projet →</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-complexity medium"><div class="complexity-dots"><span></span><span></span><span class="empty"></span></div><span>Complexité moyenne</span></div>
+          <div class="project-name">App Web — Gestion Achat &amp; Approvisionnement</div>
+          <p class="project-desc">Application web PHP/MySQL développée chez MLT SA pour centraliser les achats. Serveur WAMP local, virtual hosts, authentification sécurisée.</p>
+          <div class="project-techs"><span class="project-tech">PHP</span><span class="project-tech">MySQL</span><span class="project-tech">HTML/CSS</span><span class="project-tech">JS</span><span class="project-tech">WAMP</span></div>
+          <div class="project-footer">
+            <div class="tag">Stage MLT SA</div>
+            <button class="project-detail-btn" onclick="openModal('modal-p4')">Voir détails →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- P5 Asterisk -->
+      <div class="project-card aos d2" data-category="systemes">
+        <div class="project-img" style="background:linear-gradient(135deg,#fff7ed,#fed7aa)">
+          <svg width="160" height="120" viewBox="0 0 160 120">
+            <rect x="45" y="8" width="70" height="22" rx="5" fill="#ea580c" opacity="0.9"/>
+            <text x="80" y="18" text-anchor="middle" fill="#fff" font-size="7" font-family="DM Mono,monospace" font-weight="700">Asterisk PBX</text>
+            <text x="80" y="26" text-anchor="middle" fill="#fed7aa" font-size="6" font-family="DM Mono,monospace">Debian 12 Server</text>
+            <line x1="55" y1="30" x2="35" y2="50"/><line x1="80" y1="30" x2="80" y2="50"/><line x1="105" y1="30" x2="125" y2="50"/>
+            <rect x="10" y="50" width="50" height="28" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+            <text x="35" y="61" text-anchor="middle" fill="#ea580c" font-size="7.5" font-family="DM Mono,monospace" font-weight="600">📞 101</text>
+            <text x="35" y="71" text-anchor="middle" fill="#9a3412" font-size="5.5" font-family="DM Mono,monospace">SIP · Zoiper</text>
+            <rect x="55" y="50" width="50" height="28" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+            <text x="80" y="61" text-anchor="middle" fill="#ea580c" font-size="7.5" font-family="DM Mono,monospace" font-weight="600">📞 102</text>
+            <text x="80" y="71" text-anchor="middle" fill="#9a3412" font-size="5.5" font-family="DM Mono,monospace">IAX2 · Linphone</text>
+            <rect x="100" y="50" width="50" height="28" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+            <text x="125" y="61" text-anchor="middle" fill="#ea580c" font-size="7.5" font-family="DM Mono,monospace" font-weight="600">📞 103</text>
+            <text x="125" y="71" text-anchor="middle" fill="#9a3412" font-size="5.5" font-family="DM Mono,monospace">SIP · Zoiper</text>
+            <rect x="20" y="86" width="120" height="13" rx="4" fill="rgba(234,88,12,0.08)" stroke="#ea580c" stroke-width="0.8"/>
+            <text x="80" y="95" text-anchor="middle" fill="#ea580c" font-size="6.5" font-family="DM Mono,monospace">sip.conf · extensions.conf · Dial Plan</text>
+            <rect x="50" y="102" width="60" height="10" rx="3" fill="#e0e7ff" stroke="#6366f1" stroke-width="0.8"/>
+            <text x="80" y="109" text-anchor="middle" fill="#4338ca" font-size="6" font-family="DM Mono,monospace">Debian 12 / Linux</text>
+          </svg>
+          <div class="project-img-overlay"><span>Voir le projet →</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-complexity medium"><div class="complexity-dots"><span></span><span></span><span class="empty"></span></div><span>Complexité moyenne</span></div>
+          <div class="project-name">Téléphonie IP avec Asterisk</div>
+          <p class="project-desc">Installation Asterisk sous Debian. Configuration sip.conf, extensions SIP/IAX2 (101, 102, 103), dial plan et messagerie vocale opérationnels.</p>
+          <div class="project-techs"><span class="project-tech">Asterisk</span><span class="project-tech">SIP</span><span class="project-tech">IAX2</span><span class="project-tech">Debian 12</span></div>
+          <div class="project-footer">
+            <div class="tag">VoIP · Téléphonie IP</div>
+            <button class="project-detail-btn" onclick="openModal('modal-p5')">Voir détails →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- P6 Plateforme recrutement -->
+      <div class="project-card aos d3" data-category="dev">
+        <div class="project-img" style="background:linear-gradient(135deg,#ecfdf5,#a7f3d0)">
+          <svg width="160" height="120" viewBox="0 0 160 120">
+            <rect x="8" y="6" width="144" height="108" rx="7" fill="#fff" stroke="#22c55e" stroke-width="1.2"/>
+            <rect x="8" y="6" width="144" height="20" rx="7" fill="#22c55e"/>
+            <rect x="8" y="18" width="144" height="8" fill="#22c55e"/>
+            <text x="80" y="19" text-anchor="middle" fill="#fff" font-size="8" font-family="DM Mono,monospace" font-weight="700">Plateforme Recrutement</text>
+            <rect x="16" y="30" width="128" height="10" rx="5" fill="#f0fdf4" stroke="#22c55e" stroke-width="0.8"/>
+            <text x="80" y="37" text-anchor="middle" fill="#22c55e" font-size="6" font-family="DM Mono,monospace">🔍 Rechercher un poste...</text>
+            <rect x="16" y="44" width="58" height="26" rx="4" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+            <text x="45" y="54" text-anchor="middle" fill="#166534" font-size="5.5" font-family="DM Mono,monospace" font-weight="600">Dev Réseau · CDI</text>
+            <text x="45" y="62" text-anchor="middle" fill="#22c55e" font-size="5" font-family="DM Mono,monospace">Dakar · CCNA requis</text>
+            <rect x="40" y="65" width="10" height="4" rx="2" fill="#22c55e"/>
+            <text x="45" y="68.5" text-anchor="middle" fill="#fff" font-size="3.5" font-family="DM Mono,monospace">Postuler</text>
+            <rect x="86" y="44" width="58" height="26" rx="4" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+            <text x="115" y="54" text-anchor="middle" fill="#166534" font-size="5.5" font-family="DM Mono,monospace" font-weight="600">Admin Sys · CDD</text>
+            <text x="115" y="62" text-anchor="middle" fill="#22c55e" font-size="5" font-family="DM Mono,monospace">Remote · Linux req.</text>
+            <rect x="110" y="65" width="10" height="4" rx="2" fill="#22c55e"/>
+            <text x="115" y="68.5" text-anchor="middle" fill="#fff" font-size="3.5" font-family="DM Mono,monospace">Postuler</text>
+            <rect x="16" y="76" width="38" height="18" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="0.8"/>
+            <text x="35" y="85" text-anchor="middle" fill="#166534" font-size="7" font-family="DM Mono,monospace" font-weight="700">120</text>
+            <text x="35" y="91" text-anchor="middle" fill="#22c55e" font-size="5" font-family="DM Mono,monospace">Offres</text>
+            <rect x="61" y="76" width="38" height="18" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="0.8"/>
+            <text x="80" y="85" text-anchor="middle" fill="#166534" font-size="7" font-family="DM Mono,monospace" font-weight="700">450</text>
+            <text x="80" y="91" text-anchor="middle" fill="#22c55e" font-size="5" font-family="DM Mono,monospace">Candidats</text>
+            <rect x="106" y="76" width="38" height="18" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="0.8"/>
+            <text x="125" y="85" text-anchor="middle" fill="#166534" font-size="7" font-family="DM Mono,monospace" font-weight="700">35</text>
+            <text x="125" y="91" text-anchor="middle" fill="#22c55e" font-size="5" font-family="DM Mono,monospace">Recruteurs</text>
+            <text x="80" y="109" text-anchor="middle" fill="#6b7280" font-size="5.5" font-family="DM Mono,monospace">PHP · MySQL · HTML/CSS · JS · WordPress</text>
+          </svg>
+          <div class="project-img-overlay"><span>Voir le projet →</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-complexity medium"><div class="complexity-dots"><span></span><span></span><span class="empty"></span></div><span>Complexité moyenne</span></div>
+          <div class="project-name">Plateforme Web de Recrutement</div>
+          <p class="project-desc">Plateforme de recrutement PHP/MySQL avec gestion des offres, candidatures, profils recruteurs et tableau de bord admin. Projet académique ISI.</p>
+          <div class="project-techs"><span class="project-tech">PHP</span><span class="project-tech">MySQL</span><span class="project-tech">WordPress</span><span class="project-tech">Bootstrap</span></div>
+          <div class="project-footer">
+            <div class="tag">Projet ISI</div>
+            <button class="project-detail-btn" onclick="openModal('modal-p6')">Voir détails →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODALS -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeAllModals()"></div>
+
+<div class="modal" id="modal-p1">
+  <button class="modal-close" onclick="closeAllModals()">✕</button>
+  <div class="modal-header"><div class="modal-icon" style="background:#fef2f2"><svg viewBox="0 0 24 24" fill="#dc2626" width="26" height="26"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="modal-title">Portail Captif pfSense</div><div class="modal-subtitle">pfSense · Filtrage réseau · VLAN · NAT</div></div></div>
+  <div class="modal-body">
+    <div class="modal-section"><div class="modal-section-title">📋 Description</div><p>Déploiement complet de pfSense comme pare-feu et portail captif. L'objectif : contrôler les accès Internet en imposant une authentification, segmenter le réseau en VLANs et protéger les ressources internes.</p></div>
+    <div class="modal-section"><div class="modal-section-title">⚙️ Configuration réalisée</div><ul class="modal-list"><li>Portail captif sur VLAN 40 (Wi-Fi invités) avec page d'auth personnalisée</li><li>Règles de filtrage par IP, port et protocole (HTTP/HTTPS/SSH)</li><li>3 VLANs : Admin (10), Opérations (20), Serveurs (30), Wi-Fi (40)</li><li>Zone DMZ pour serveurs web accessibles depuis l'extérieur</li><li>NAT/PAT pour translation d'adresses vers Internet</li><li>Logs de connexion et surveillance des sessions actives</li></ul></div>
+    <div class="modal-tags"><span class="tag">pfSense 2.7</span><span class="tag">Portail captif</span><span class="tag">VLAN 802.1Q</span><span class="tag">Firewall</span><span class="tag">NAT/PAT</span><span class="tag">DMZ</span></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-p2">
+  <button class="modal-close" onclick="closeAllModals()">✕</button>
+  <div class="modal-header"><div class="modal-icon" style="background:#eff6ff"><svg viewBox="0 0 24 24" fill="#1d4ed8" width="26" height="26"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3z"/></svg></div><div><div class="modal-title">Active Directory &amp; Déploiement Win 11</div><div class="modal-subtitle">Windows Server 2022 · GPO · WDS · DHCP</div></div></div>
+  <div class="modal-body">
+    <div class="modal-section"><div class="modal-section-title">📋 Description</div><p>Mise en place d'un contrôleur de domaine Windows Server 2022 avec Active Directory, OUs, GPO et déploiement automatisé de Windows 11 via Windows Deployment Services.</p></div>
+    <div class="modal-section"><div class="modal-section-title">⚙️ Éléments configurés</div><ul class="modal-list"><li>Contrôleur de domaine : mltsalab.local (Windows Server 2022)</li><li>Structure OU : Direction / Employés / IT-Admin / Ordinateurs</li><li>GPO : fond d'écran, restrictions logiciels, mappage lecteurs réseau</li><li>WDS + fichier réponse XML pour déploiement Windows 11 automatique</li><li>DHCP intégré avec plages par département</li><li>DNS interne lié à l'AD</li></ul></div>
+    <div class="modal-tags"><span class="tag">Windows Server 2022</span><span class="tag">Active Directory</span><span class="tag">GPO</span><span class="tag">WDS</span><span class="tag">DHCP</span><span class="tag">DNS</span></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-p3">
+  <button class="modal-close" onclick="closeAllModals()">✕</button>
+  <div class="modal-header"><div class="modal-icon" style="background:#f0fdf4"><svg viewBox="0 0 24 24" fill="#15803d" width="26" height="26"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H5v-2h8v2zm6-4H5v-2h14v2zm0-4H5V7h14v2z"/></svg></div><div><div class="modal-title">Virtualisation des Serveurs</div><div class="modal-subtitle">Proxmox VE · VMware ESXi · VirtualBox · Docker</div></div></div>
+  <div class="modal-body">
+    <div class="modal-section"><div class="modal-section-title">📋 Description</div><p>Déploiement d'une infrastructure de virtualisation avec Proxmox VE et VMware ESXi. Hébergement de 5 VMs simultanées pour différents services réseau et tests de configurations.</p></div>
+    <div class="modal-section"><div class="modal-section-title">🖥️ VMs déployées</div>
+      <table class="modal-table">
+        <tr><th>VM</th><th>OS</th><th>Services</th><th>RAM</th></tr>
+        <tr><td>VM-01</td><td>Debian 12</td><td>NGINX, DNS, Asterisk</td><td>2 Go</td></tr>
+        <tr><td>VM-02</td><td>Ubuntu 22.04</td><td>DHCP, WAMP, MySQL</td><td>4 Go</td></tr>
+        <tr><td>VM-03</td><td>Windows Server</td><td>AD, GPO, DNS, WDS</td><td>4 Go</td></tr>
+        <tr><td>VM-04</td><td>AlmaLinux 9</td><td>Tests réseau, monitoring</td><td>2 Go</td></tr>
+        <tr><td>VM-05</td><td>Rocky Linux</td><td>Firewall, tests ACL</td><td>1 Go</td></tr>
+      </table>
+    </div>
+    <div class="modal-tags"><span class="tag">Proxmox VE</span><span class="tag">VMware ESXi</span><span class="tag">VirtualBox</span><span class="tag">Docker</span><span class="tag">Snapshots</span></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-p4">
+  <button class="modal-close" onclick="closeAllModals()">✕</button>
+  <div class="modal-header"><div class="modal-icon" style="background:#faf5ff"><svg viewBox="0 0 24 24" fill="#7c3aed" width="26" height="26"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg></div><div><div class="modal-title">App Gestion Achat &amp; Approvisionnement</div><div class="modal-subtitle">Stage MLT SA · PHP · MySQL · WAMP · JavaScript</div></div></div>
+  <div class="modal-body">
+    <div class="modal-section"><div class="modal-section-title">📋 Description</div><p>Application web développée durant le stage chez MLT SA (Manutention Logistique Transport) pour centraliser la gestion des achats et approvisionnements. Interface admin + espace utilisateurs avec rôles différenciés.</p></div>
+    <div class="modal-section"><div class="modal-section-title">⚙️ Fonctionnalités</div><ul class="modal-list"><li>Gestion des bons de commande et fournisseurs</li><li>Tableau de bord : statistiques, alertes de stock bas</li><li>Rôles utilisateurs : Admin / Acheteur / Lecteur</li><li>Export PDF/Excel des rapports d'approvisionnement</li><li>Serveur WAMP local avec virtual hosts Apache configurés</li><li>Sessions PHP sécurisées + protection CSRF</li></ul></div>
+    <div class="modal-tags"><span class="tag">PHP 8.1</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">WAMP</span><span class="tag">Bootstrap</span></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-p5">
+  <button class="modal-close" onclick="closeAllModals()">✕</button>
+  <div class="modal-header"><div class="modal-icon" style="background:#fff7ed"><svg viewBox="0 0 24 24" fill="#ea580c" width="26" height="26"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></div><div><div class="modal-title">Téléphonie IP avec Asterisk</div><div class="modal-subtitle">Asterisk 20 · SIP · IAX2 · Debian 12</div></div></div>
+  <div class="modal-body">
+    <div class="modal-section"><div class="modal-section-title">📋 Description</div><p>Installation et configuration d'un PBX Asterisk sous Debian 12. Création des extensions SIP et IAX2, configuration du dial plan et tests inter-postes avec Zoiper et Linphone.</p></div>
+    <div class="modal-section"><div class="modal-section-title">⚙️ Configuration réalisée</div><ul class="modal-list"><li>Installation Asterisk 20 sous Debian 12 (depuis les dépôts)</li><li>sip.conf : extensions 101, 102, 103 avec authentification</li><li>extensions.conf : dial plan, messagerie vocale (*98), renvoi d'appel</li><li>Tests avec softphones Zoiper5 et Linphone</li><li>IAX2 configuré pour communication inter-Asterisk future</li><li>Intégration réseau local VLAN 30 (Serveurs)</li></ul></div>
+    <div class="modal-tags"><span class="tag">Asterisk 20</span><span class="tag">SIP</span><span class="tag">IAX2</span><span class="tag">Debian 12</span><span class="tag">Zoiper</span><span class="tag">Linphone</span></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-p6">
+  <button class="modal-close" onclick="closeAllModals()">✕</button>
+  <div class="modal-header"><div class="modal-icon" style="background:#ecfdf5"><svg viewBox="0 0 24 24" fill="#15803d" width="26" height="26"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div><div><div class="modal-title">Plateforme Web de Recrutement</div><div class="modal-subtitle">PHP · MySQL · WordPress · Projet ISI</div></div></div>
+  <div class="modal-body">
+    <div class="modal-section"><div class="modal-section-title">📋 Description</div><p>Plateforme web de mise en relation entre recruteurs et candidats, développée en projet académique à l'ISI Dakar. Interface intuitive avec gestion complète des offres, candidatures et profils.</p></div>
+    <div class="modal-section"><div class="modal-section-title">⚙️ Fonctionnalités</div><ul class="modal-list"><li>Espace recruteur : publication et gestion des offres d'emploi</li><li>Espace candidat : profil, CV en ligne, suivi des candidatures</li><li>Moteur de recherche par compétences, localisation, type de contrat</li><li>Tableau de bord admin : statistiques, modération, gestion users</li><li>Notifications email (PHP Mailer) lors de nouvelles candidatures</li><li>Version WordPress + thème personnalisé</li></ul></div>
+    <div class="modal-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">WordPress</span><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span></div>
+  </div>
+</div>
+
+
+<!-- TOPOLOGY -->
+<section id="topology">
+  <div class="container">
+    <div class="aos">
+      <div class="section-label">TOPOLOGIES &amp; VLAN</div>
+      <h2 class="section-title">Diagrammes Réseau<br>&amp; Architectures</h2>
+      <p class="section-sub">Visualisation complète des topologies, segmentations VLAN et flux de données des projets réalisés à l'ISI et chez MLT SA.</p>
+    </div>
+    <div class="topo-main aos d1">
+      <div class="topo-toolbar">
+        <div class="topo-toolbar-left">
+          <div class="topo-toolbar-dots"><span></span><span></span><span></span></div>
+          <span class="topo-toolbar-title">topology-isi-mltsа.drawio — Infrastructure Multi-Services · Dakar 2025</span>
+        </div>
+        <div class="topo-toolbar-right">
+          <span class="topo-toolbar-tag">pfSense</span>
+          <span class="topo-toolbar-tag">AD/GPO</span>
+          <span class="topo-toolbar-tag">Asterisk</span>
+          <span class="topo-toolbar-tag">Proxmox</span>
+        </div>
+      </div>
+      <div class="topo-canvas">
+        <svg class="topo-full-svg" viewBox="0 0 920 490" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="gT"><feGaussianBlur stdDeviation="4" result="cb"/><feMerge><feMergeNode in="cb"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <filter id="sT"><feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="rgba(0,0,0,0.5)"/></filter>
+            <marker id="aWT" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(150,200,255,0.8)"/></marker>
+            <marker id="aRT" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(239,68,68,0.8)"/></marker>
+            <pattern id="bgT" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="11" cy="11" r="0.9" fill="rgba(100,130,200,0.12)"/></pattern>
+          </defs>
+          <rect width="920" height="490" fill="#07101f"/>
+          <rect width="920" height="490" fill="url(#bgT)"/>
+
+          <!-- INTERNET -->
+          <ellipse cx="460" cy="34" rx="95" ry="24" fill="rgba(4,97,197,0.1)" stroke="#0461C5" stroke-width="1.5" stroke-dasharray="7,4" filter="url(#gT)"/>
+          <text x="440" y="30" fill="#7ab3ff" font-size="10" font-family="DM Mono,monospace" font-weight="600">☁ INTERNET / WAN</text>
+          <text x="460" y="46" text-anchor="middle" fill="#3d5a80" font-size="7.5" font-family="DM Mono,monospace">ISP Fibre — MLT SA Dakar</text>
+
+          <!-- pfSense -->
+          <line x1="460" y1="58" x2="460" y2="90" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#aRT)"/>
+          <rect x="385" y="90" width="150" height="46" rx="10" fill="#1a0808" stroke="#ef4444" stroke-width="2" filter="url(#sT)"/>
+          <text x="410" y="108" fill="#ef4444" font-size="9.5" font-family="DM Mono,monospace" font-weight="700">🛡 pfSense Firewall</text>
+          <text x="460" y="124" text-anchor="middle" fill="#7a2020" font-size="7.5" font-family="DM Mono,monospace">Portail captif · Filtrage · NAT/PAT</text>
+          <circle cx="381" cy="113" r="6" fill="#ef4444" opacity="0.9"/>
+          <text x="360" y="130" fill="#ef4444" font-size="6.5" font-family="DM Mono,monospace">OUTSIDE</text>
+          <text x="490" y="130" fill="#FFC700" font-size="6.5" font-family="DM Mono,monospace">DMZ:192.168.100.x</text>
+
+          <!-- Core Switch -->
+          <line x1="460" y1="136" x2="460" y2="166" stroke="rgba(150,200,255,0.5)" stroke-width="2.5" marker-end="url(#aWT)"/>
+          <rect x="382" y="166" width="156" height="42" rx="10" fill="#0d1f3c" stroke="#0461C5" stroke-width="2" filter="url(#gT)"/>
+          <text x="398" y="182" fill="#7ab3ff" font-size="9.5" font-family="DM Mono,monospace" font-weight="700">⚡ CORE SWITCH</text>
+          <text x="460" y="198" text-anchor="middle" fill="#3d6a99" font-size="7.5" font-family="DM Mono,monospace">Cisco Catalyst · VLAN Trunk 802.1Q</text>
+
+          <!-- 4 branches -->
+          <line x1="420" y1="208" x2="155" y2="260" stroke="rgba(150,200,255,0.3)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#aWT)"/>
+          <line x1="445" y1="208" x2="370" y2="260" stroke="rgba(150,200,255,0.35)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#aWT)"/>
+          <line x1="475" y1="208" x2="575" y2="260" stroke="rgba(150,200,255,0.35)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#aWT)"/>
+          <line x1="500" y1="208" x2="775" y2="260" stroke="rgba(150,200,255,0.3)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#aWT)"/>
+          <text x="275" y="246" fill="#3d5a80" font-size="7" font-family="DM Mono,monospace">100 Mbps</text>
+          <text x="395" y="246" fill="#3d5a80" font-size="7" font-family="DM Mono,monospace">1 Gbps</text>
+          <text x="530" y="246" fill="#3d5a80" font-size="7" font-family="DM Mono,monospace">1 Gbps</text>
+          <text x="668" y="246" fill="#3d5a80" font-size="7" font-family="DM Mono,monospace">100 Mbps</text>
+
+          <!-- VLAN 10 Admin -->
+          <rect x="62" y="260" width="186" height="42" rx="8" fill="#0a1628" stroke="#22c55e" stroke-width="1.8" filter="url(#sT)"/>
+          <text x="82" y="276" fill="#22c55e" font-size="9" font-family="DM Mono,monospace" font-weight="600">🖥 VLAN 10 — Admin / AD</text>
+          <text x="155" y="292" text-anchor="middle" fill="#15803d" font-size="7" font-family="DM Mono,monospace">192.168.10.0/26 · Windows Server · GPO</text>
+          <circle cx="58" cy="281" r="5" fill="#22c55e" filter="url(#gT)"/>
+
+          <!-- VLAN 20 Serveurs -->
+          <rect x="278" y="260" width="186" height="42" rx="8" fill="#0a1628" stroke="#FFC700" stroke-width="1.8" filter="url(#sT)"/>
+          <text x="298" y="276" fill="#FFC700" font-size="9" font-family="DM Mono,monospace" font-weight="600">🖥 VLAN 20 — Serveurs</text>
+          <text x="371" y="292" text-anchor="middle" fill="#a16207" font-size="7" font-family="DM Mono,monospace">192.168.20.0/27 · Proxmox · WAMP</text>
+          <circle cx="274" cy="281" r="5" fill="#22c55e" filter="url(#gT)"/>
+
+          <!-- VLAN 30 Ops -->
+          <rect x="494" y="260" width="186" height="42" rx="8" fill="#0a1628" stroke="#a855f7" stroke-width="1.8" filter="url(#sT)"/>
+          <text x="514" y="276" fill="#a855f7" font-size="9" font-family="DM Mono,monospace" font-weight="600">💻 VLAN 30 — Ops / VoIP</text>
+          <text x="587" y="292" text-anchor="middle" fill="#7c3aed" font-size="7" font-family="DM Mono,monospace">192.168.30.0/25 · PC · Asterisk SIP</text>
+          <circle cx="490" cy="281" r="5" fill="#22c55e" filter="url(#gT)"/>
+
+          <!-- VLAN 40 WiFi -->
+          <rect x="694" y="260" width="186" height="42" rx="8" fill="#0a1628" stroke="#06b6d4" stroke-width="1.8" filter="url(#sT)"/>
+          <text x="714" y="276" fill="#06b6d4" font-size="9" font-family="DM Mono,monospace" font-weight="600">📶 VLAN 40 — Wi-Fi Captif</text>
+          <text x="787" y="292" text-anchor="middle" fill="#0891b2" font-size="7" font-family="DM Mono,monospace">192.168.40.0/24 · pfSense Auth</text>
+          <circle cx="690" cy="281" r="5" fill="#FFC700"/>
+
+          <!-- Access rows VLAN 10 -->
+          <line x1="105" y1="302" x2="85" y2="338" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+          <line x1="155" y1="302" x2="155" y2="338" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+          <line x1="205" y1="302" x2="225" y2="338" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+          <rect x="40" y="338" width="90" height="30" rx="6" fill="rgba(34,197,94,0.1)" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="85" y="350" text-anchor="middle" fill="#22c55e" font-size="8" font-family="DM Mono,monospace" font-weight="600">PC Admin</text>
+          <text x="85" y="361" text-anchor="middle" fill="#15803d" font-size="6.5" font-family="DM Mono,monospace">Win11 × 8</text>
+          <rect x="110" y="338" width="90" height="30" rx="6" fill="rgba(34,197,94,0.1)" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="155" y="350" text-anchor="middle" fill="#22c55e" font-size="8" font-family="DM Mono,monospace" font-weight="600">WinServer</text>
+          <text x="155" y="361" text-anchor="middle" fill="#15803d" font-size="6.5" font-family="DM Mono,monospace">AD · GPO · DNS</text>
+          <rect x="180" y="338" width="90" height="30" rx="6" fill="rgba(34,197,94,0.1)" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="225" y="350" text-anchor="middle" fill="#22c55e" font-size="8" font-family="DM Mono,monospace" font-weight="600">Imprimantes</text>
+          <text x="225" y="361" text-anchor="middle" fill="#15803d" font-size="6.5" font-family="DM Mono,monospace">HP · Canon × 3</text>
+
+          <!-- Access rows VLAN 20 -->
+          <line x1="325" y1="302" x2="305" y2="338" stroke="#FFC700" stroke-width="1.5" opacity="0.6"/>
+          <line x1="371" y1="302" x2="371" y2="338" stroke="#FFC700" stroke-width="1.5" opacity="0.6"/>
+          <line x1="417" y1="302" x2="437" y2="338" stroke="#FFC700" stroke-width="1.5" opacity="0.6"/>
+          <rect x="260" y="338" width="90" height="30" rx="6" fill="rgba(255,199,0,0.1)" stroke="#FFC700" stroke-width="1.5"/>
+          <text x="305" y="350" text-anchor="middle" fill="#FFC700" font-size="8" font-family="DM Mono,monospace" font-weight="600">VM-Debian</text>
+          <text x="305" y="361" text-anchor="middle" fill="#a16207" font-size="6.5" font-family="DM Mono,monospace">NGINX · DNS</text>
+          <rect x="326" y="338" width="90" height="30" rx="6" fill="rgba(255,199,0,0.1)" stroke="#FFC700" stroke-width="1.5"/>
+          <text x="371" y="350" text-anchor="middle" fill="#FFC700" font-size="8" font-family="DM Mono,monospace" font-weight="600">VM-Ubuntu</text>
+          <text x="371" y="361" text-anchor="middle" fill="#a16207" font-size="6.5" font-family="DM Mono,monospace">WAMP · MySQL</text>
+          <rect x="392" y="338" width="90" height="30" rx="6" fill="rgba(255,199,0,0.1)" stroke="#FFC700" stroke-width="1.5"/>
+          <text x="437" y="350" text-anchor="middle" fill="#FFC700" font-size="8" font-family="DM Mono,monospace" font-weight="600">NAS Backup</text>
+          <text x="437" y="361" text-anchor="middle" fill="#a16207" font-size="6.5" font-family="DM Mono,monospace">Synology</text>
+
+          <!-- Access rows VLAN 30 -->
+          <line x1="540" y1="302" x2="520" y2="338" stroke="#a855f7" stroke-width="1.5" opacity="0.6"/>
+          <line x1="587" y1="302" x2="587" y2="338" stroke="#a855f7" stroke-width="1.5" opacity="0.6"/>
+          <line x1="634" y1="302" x2="654" y2="338" stroke="#a855f7" stroke-width="1.5" opacity="0.6"/>
+          <rect x="475" y="338" width="90" height="30" rx="6" fill="rgba(168,85,247,0.1)" stroke="#a855f7" stroke-width="1.5"/>
+          <text x="520" y="350" text-anchor="middle" fill="#a855f7" font-size="8" font-family="DM Mono,monospace" font-weight="600">PC Ops</text>
+          <text x="520" y="361" text-anchor="middle" fill="#7c3aed" font-size="6.5" font-family="DM Mono,monospace">Win11 × 15</text>
+          <rect x="542" y="338" width="90" height="30" rx="6" fill="rgba(168,85,247,0.1)" stroke="#a855f7" stroke-width="1.5"/>
+          <text x="587" y="350" text-anchor="middle" fill="#a855f7" font-size="8" font-family="DM Mono,monospace" font-weight="600">Tél. IP</text>
+          <text x="587" y="361" text-anchor="middle" fill="#7c3aed" font-size="6.5" font-family="DM Mono,monospace">Asterisk SIP</text>
+          <rect x="609" y="338" width="90" height="30" rx="6" fill="rgba(168,85,247,0.1)" stroke="#a855f7" stroke-width="1.5"/>
+          <text x="654" y="350" text-anchor="middle" fill="#a855f7" font-size="8" font-family="DM Mono,monospace" font-weight="600">Scanners</text>
+          <text x="654" y="361" text-anchor="middle" fill="#7c3aed" font-size="6.5" font-family="DM Mono,monospace">Pont bascule</text>
+
+          <!-- Access rows VLAN 40 -->
+          <line x1="740" y1="302" x2="720" y2="338" stroke="#06b6d4" stroke-width="1.5" opacity="0.6"/>
+          <line x1="787" y1="302" x2="787" y2="338" stroke="#06b6d4" stroke-width="1.5" opacity="0.6"/>
+          <line x1="834" y1="302" x2="854" y2="338" stroke="#06b6d4" stroke-width="1.5" opacity="0.6"/>
+          <rect x="675" y="338" width="90" height="30" rx="6" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1.5"/>
+          <text x="720" y="350" text-anchor="middle" fill="#06b6d4" font-size="8" font-family="DM Mono,monospace" font-weight="600">AP Wi-Fi</text>
+          <text x="720" y="361" text-anchor="middle" fill="#0891b2" font-size="6.5" font-family="DM Mono,monospace">Portail captif</text>
+          <rect x="742" y="338" width="90" height="30" rx="6" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1.5"/>
+          <text x="787" y="350" text-anchor="middle" fill="#06b6d4" font-size="8" font-family="DM Mono,monospace" font-weight="600">Invités Web</text>
+          <text x="787" y="361" text-anchor="middle" fill="#0891b2" font-size="6.5" font-family="DM Mono,monospace">Auth + filtre</text>
+          <rect x="809" y="338" width="90" height="30" rx="6" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1.5"/>
+          <text x="854" y="350" text-anchor="middle" fill="#06b6d4" font-size="8" font-family="DM Mono,monospace" font-weight="600">Mobiles</text>
+          <text x="854" y="361" text-anchor="middle" fill="#0891b2" font-size="6.5" font-family="DM Mono,monospace">BYOD isolé</text>
+
+          <!-- Device bottom rows -->
+          <line x1="85" y1="368" x2="85" y2="390"/><line x1="155" y1="368" x2="155" y2="390"/><line x1="225" y1="368" x2="225" y2="390"/>
+          <rect x="42" y="390" width="86" height="18" rx="4" fill="rgba(34,197,94,0.12)" stroke="#22c55e" stroke-width="1"/>
+          <text x="85" y="401" text-anchor="middle" fill="#22c55e" font-size="6.5" font-family="DM Mono,monospace">💻 Win11 × 8</text>
+          <rect x="112" y="390" width="86" height="18" rx="4" fill="rgba(34,197,94,0.12)" stroke="#22c55e" stroke-width="1"/>
+          <text x="155" y="401" text-anchor="middle" fill="#22c55e" font-size="6.5" font-family="DM Mono,monospace">🖥 WinSrv 2022</text>
+          <rect x="182" y="390" width="86" height="18" rx="4" fill="rgba(34,197,94,0.12)" stroke="#22c55e" stroke-width="1"/>
+          <text x="225" y="401" text-anchor="middle" fill="#22c55e" font-size="6.5" font-family="DM Mono,monospace">🖨 HP × 3</text>
+
+          <line x1="305" y1="368" x2="305" y2="390"/><line x1="371" y1="368" x2="371" y2="390"/><line x1="437" y1="368" x2="437" y2="390"/>
+          <rect x="260" y="390" width="90" height="18" rx="4" fill="rgba(255,199,0,0.12)" stroke="#FFC700" stroke-width="1"/>
+          <text x="305" y="401" text-anchor="middle" fill="#FFC700" font-size="6.5" font-family="DM Mono,monospace">🐧 Debian 12</text>
+          <rect x="326" y="390" width="90" height="18" rx="4" fill="rgba(255,199,0,0.12)" stroke="#FFC700" stroke-width="1"/>
+          <text x="371" y="401" text-anchor="middle" fill="#FFC700" font-size="6.5" font-family="DM Mono,monospace">🐧 Ubuntu 22</text>
+          <rect x="392" y="390" width="90" height="18" rx="4" fill="rgba(255,199,0,0.12)" stroke="#FFC700" stroke-width="1"/>
+          <text x="437" y="401" text-anchor="middle" fill="#FFC700" font-size="6.5" font-family="DM Mono,monospace">💾 NAS Synology</text>
+
+          <!-- Legend bar -->
+          <rect x="0" y="428" width="920" height="62" fill="rgba(0,0,0,0.45)"/>
+          <circle cx="30" cy="459" r="5" fill="#22c55e"/><text x="42" y="463" fill="#8aa0c0" font-size="7.5" font-family="DM Mono,monospace">Opérationnel</text>
+          <circle cx="145" cy="459" r="5" fill="#FFC700"/><text x="157" y="463" fill="#8aa0c0" font-size="7.5" font-family="DM Mono,monospace">Maintenance</text>
+          <rect x="254" y="456" width="20" height="2" fill="#0461C5" stroke-dasharray="4,2"/><text x="280" y="463" fill="#8aa0c0" font-size="7.5" font-family="DM Mono,monospace">Trunk 802.1Q</text>
+          <rect x="390" y="456" width="20" height="3" fill="#ef4444"/><text x="415" y="463" fill="#8aa0c0" font-size="7.5" font-family="DM Mono,monospace">Zone pfSense</text>
+          <rect x="505" y="456" width="20" height="2" fill="#22c55e"/><text x="530" y="463" fill="#8aa0c0" font-size="7.5" font-family="DM Mono,monospace">Accès VLAN</text>
+          <text x="650" y="459" fill="#3d5a80" font-size="7.5" font-family="DM Mono,monospace">4 VLANs · pfSense · AD · Proxmox · Asterisk · 40+ hôtes · MLT SA / ISI Dakar</text>
+        </svg>
+      </div>
+    </div>
+    <div class="vlan-legend aos d2">
+      <div class="vlan-item"><div class="vlan-color" style="background:#22c55e"></div><span class="vlan-name">Administration / AD</span><span class="vlan-id">VLAN 10</span></div>
+      <div class="vlan-item"><div class="vlan-color" style="background:#FFC700"></div><span class="vlan-name">Serveurs / VMs</span><span class="vlan-id">VLAN 20</span></div>
+      <div class="vlan-item"><div class="vlan-color" style="background:#a855f7"></div><span class="vlan-name">Opérations / VoIP</span><span class="vlan-id">VLAN 30</span></div>
+      <div class="vlan-item"><div class="vlan-color" style="background:#06b6d4"></div><span class="vlan-name">Wi-Fi / Portail captif</span><span class="vlan-id">VLAN 40</span></div>
+      <div class="vlan-item"><div class="vlan-color" style="background:#ef4444"></div><span class="vlan-name">pfSense / DMZ</span><span class="vlan-id">Outside</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section id="security">
+  <div class="container">
+    <div class="aos">
+      <div class="section-label" style="color:var(--gold)">SÉCURITÉ &amp; COMPÉTENCES</div>
+      <h2 class="section-title" style="color:#fff">Protection &amp;<br>Administration</h2>
+      <p class="section-sub" style="color:#8aa0c0">Compétences en cybersécurité réseau, administration systèmes et infrastructure physique acquises en formation et sur le terrain.</p>
+    </div>
+    <div class="security-grid">
+      <div class="security-card aos d1">
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="#7ab3ff"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12V11c0 4.52-3.05 8.79-7 10.04C8.05 19.79 5 15.52 5 11V6.3l7-3.12z"/></svg></div>
+        <div class="security-card-title">pfSense — Firewall &amp; Portail captif</div>
+        <p class="security-card-desc">Déploiement pfSense avec portail captif, filtrage par règles ACL, zones DMZ/Inside/Outside et NAT/PAT. Projet réalisé en formation ISI.</p>
+        <div class="security-meter-label"><span>Maîtrise</span><span>88%</span></div>
+        <div class="security-bar"><div class="security-bar-fill" data-width="88%"></div></div>
+        <div class="security-indicator"><div class="security-dot"></div><span class="security-status">Projet réalisé · ISI Dakar</span></div>
+      </div>
+      <div class="security-card aos d2">
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="#7ab3ff"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+        <div class="security-card-title">VLAN &amp; Segmentation réseau</div>
+        <p class="security-card-desc">Segmentation réseau en VLANs distincts sur Cisco avec trunk 802.1Q, politiques inter-VLAN restrictives et adressage IP planifié. CCNA1 validé.</p>
+        <div class="security-meter-label"><span>Maîtrise</span><span>82%</span></div>
+        <div class="security-bar"><div class="security-bar-fill" data-width="82%"></div></div>
+        <div class="security-indicator"><div class="security-dot"></div><span class="security-status">CCNA1 Cisco obtenu</span></div>
+      </div>
+      <div class="security-card aos d3">
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="#7ab3ff"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+        <div class="security-card-title">Active Directory &amp; GPO</div>
+        <p class="security-card-desc">Administration Windows Server 2022 avec AD, OUs, GPO de sécurisation des postes et déploiement automatisé Windows 11 via WDS.</p>
+        <div class="security-meter-label"><span>Maîtrise</span><span>78%</span></div>
+        <div class="security-bar"><div class="security-bar-fill" data-width="78%"></div></div>
+        <div class="security-indicator"><div class="security-dot"></div><span class="security-status">Windows Server 2022</span></div>
+      </div>
+      <div class="security-card aos d1">
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="#7ab3ff"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg></div>
+        <div class="security-card-title">Administration réseau — MLT SA</div>
+        <p class="security-card-desc">Surveillance switches, routeurs et points d'accès. Résolution de problèmes de connectivité réseau (IP, câbles, Wi-Fi). Support IT terrain au quotidien.</p>
+        <div class="security-meter-label"><span>Maîtrise</span><span>85%</span></div>
+        <div class="security-bar"><div class="security-bar-fill" data-width="85%"></div></div>
+        <div class="security-indicator"><div class="security-dot"></div><span class="security-status">Stage terrain — MLT SA 2025</span></div>
+      </div>
+      <div class="security-card aos d2">
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="#7ab3ff"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 2.5c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13c-.97 0-1.84-.39-2.47-1.03l-5.38 5.38-1.06-1.06 5.38-5.38A3.48 3.48 0 0110 9.5C10 7.57 11.57 6 12 6z"/></svg></div>
+        <div class="security-card-title">Virtualisation &amp; Isolation</div>
+        <p class="security-card-desc">Déploiement Proxmox VE et VMware ESXi avec réseaux virtuels isolés (vSwitch), VLANs sur VMs, snapshots avant modifications critiques.</p>
+        <div class="security-meter-label"><span>Maîtrise</span><span>80%</span></div>
+        <div class="security-bar"><div class="security-bar-fill" data-width="80%"></div></div>
+        <div class="security-indicator"><div class="security-dot"></div><span class="security-status">Proxmox VE · ESXi · VirtualBox</span></div>
+      </div>
+      <div class="security-card aos d3">
+        <div class="security-icon"><svg viewBox="0 0 24 24" fill="#7ab3ff"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg></div>
+        <div class="security-card-title">Infrastructure physique &amp; Câblage</div>
+        <p class="security-card-desc">Câblage réseau structuré, tests de continuité, validation des installations. Dépannage matériel : imprimantes, scanners, équipements réseau. Expérience terrain MLT SA.</p>
+        <div class="security-meter-label"><span>Maîtrise</span><span>90%</span></div>
+        <div class="security-bar"><div class="security-bar-fill" data-width="90%"></div></div>
+        <div class="security-indicator"><div class="security-dot"></div><span class="security-status">Expérience terrain confirmée</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOUD / VIRTUALISATION -->
+<section id="cloud">
+  <div class="container">
+    <div class="cloud-header aos">
+      <div class="section-label">CLOUD &amp; VIRTUALISATION</div>
+      <h2 class="section-title">Stack Technique<br>&amp; Environnements</h2>
+      <p class="section-sub">Technologies maîtrisées en virtualisation, Linux, développement et outils réseau — construites projet par projet à l'ISI et en entreprise.</p>
+    </div>
+    <div class="aws-grid aos d1">
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#15803d,#22c55e)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><rect x="8" y="8" width="24" height="24" rx="4" fill="rgba(255,255,255,0.15)"/><rect x="12" y="12" width="16" height="4" rx="1"/><rect x="12" y="18" width="16" height="4" rx="1"/><rect x="12" y="24" width="10" height="4" rx="1"/></svg></div>
+        <div class="aws-service-name">Proxmox VE</div>
+        <div class="aws-service-desc">Hyperviseur open source pour déployer et gérer plusieurs VMs simultanément. Interface web, snapshots, réseau virtuel avec VLANs. Utilisé pour héberger Debian, Ubuntu, Windows Server.</div>
+        <div class="aws-service-tags"><span>Hyperviseur</span><span>VMs + Containers</span><span>Snapshots</span></div>
+      </div>
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><path d="M20 8 L32 14 V26 L20 32 L8 26 V14 Z" stroke="#fff" stroke-width="1.5" fill="rgba(255,255,255,0.15)"/><circle cx="20" cy="20" r="5" fill="#fff"/></svg></div>
+        <div class="aws-service-name">VMware ESXi / vSphere</div>
+        <div class="aws-service-desc">Plateforme de virtualisation entreprise. Configuration des datastores, vSwitches, réseaux virtuels. Gestion des ressources vCPU/RAM/stockage et migration de VMs.</div>
+        <div class="aws-service-tags"><span>ESXi 7.0</span><span>vSwitch</span><span>Datastores</span></div>
+      </div>
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><rect x="6" y="14" width="28" height="18" rx="4" fill="rgba(255,255,255,0.15)"/><path d="M14 14 V10 Q14 6 20 6 Q26 6 26 10 V14" stroke="#fff" stroke-width="2" fill="none"/><circle cx="20" cy="22" r="3" fill="#fff"/></svg></div>
+        <div class="aws-service-name">Docker</div>
+        <div class="aws-service-desc">Conteneurisation d'applications pour déploiements légers et reproductibles. Création de Dockerfiles, gestion des images et réseaux de conteneurs. Utilisé en cours à l'ISI.</div>
+        <div class="aws-service-tags"><span>Conteneurs</span><span>Dockerfile</span><span>Réseaux</span></div>
+      </div>
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#ea580c,#f97316)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><text x="20" y="27" text-anchor="middle" font-size="20">🐧</text></svg></div>
+        <div class="aws-service-name">Linux Multi-distros</div>
+        <div class="aws-service-desc">Installation, configuration et administration : Debian 12, Ubuntu 22.04, AlmaLinux 9, Rocky Linux. Services réseaux : DHCP, DNS, NGINX, Asterisk, WAMP selon la distribution.</div>
+        <div class="aws-service-tags"><span>Debian 12</span><span>Ubuntu</span><span>AlmaLinux</span><span>Rocky</span></div>
+      </div>
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><path d="M20 6 L26 12 H22 V22 H18 V12 H14 Z"/><rect x="10" y="28" width="20" height="5" rx="2" fill="#fff"/></svg></div>
+        <div class="aws-service-name">pfSense / OPNsense</div>
+        <div class="aws-service-desc">Firewall open source basé sur FreeBSD. Configuration des règles ACL, portail captif avec authentification, zones de sécurité (DMZ/Inside/Outside), logs et monitoring.</div>
+        <div class="aws-service-tags"><span>Firewall</span><span>Portail captif</span><span>ACL</span><span>DMZ</span></div>
+      </div>
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#0e6655,#1abc9c)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><circle cx="20" cy="20" r="12" stroke="#fff" stroke-width="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="20" r="6" fill="#fff" opacity="0.8"/><line x1="20" y1="8" x2="20" y2="32" stroke="#fff" stroke-width="1.2" opacity="0.5"/><line x1="8" y1="20" x2="32" y2="20" stroke="#fff" stroke-width="1.2" opacity="0.5"/></svg></div>
+        <div class="aws-service-name">GNS3 / EVE-NG / Packet Tracer</div>
+        <div class="aws-service-desc">Émulateurs réseau pour maquetter des topologies Cisco complexes avant déploiement. OSPF, BGP, VLANs, pfSense testés dans ces environnements simulés à l'ISI.</div>
+        <div class="aws-service-tags"><span>GNS3</span><span>EVE-NG</span><span>Packet Tracer</span></div>
+      </div>
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#b45309,#f59e0b)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><ellipse cx="20" cy="14" rx="12" ry="6" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/><line x1="8" y1="14" x2="8" y2="26" stroke="#fff" stroke-width="1.5"/><line x1="32" y1="14" x2="32" y2="26" stroke="#fff" stroke-width="1.5"/><ellipse cx="20" cy="26" rx="12" ry="6" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <div class="aws-service-name">MySQL / Oracle DB</div>
+        <div class="aws-service-desc">Conception BDD relationnelles (MCD/MLD), requêtes SQL avancées, procédures stockées. Utilisé dans les projets PHP (recrutement, gestion achat) et cours Oracle à l'ISI.</div>
+        <div class="aws-service-tags"><span>MySQL</span><span>Oracle DB</span><span>SQL</span><span>PHPMyAdmin</span></div>
+      </div>
+      <div class="aws-service-card">
+        <div class="aws-service-icon" style="background:linear-gradient(135deg,#334155,#64748b)"><svg viewBox="0 0 40 40" fill="#fff" width="26" height="26"><rect x="8" y="16" width="24" height="16" rx="3" fill="rgba(255,255,255,0.15)"/><rect x="12" y="8" width="16" height="10" rx="2" fill="rgba(255,255,255,0.25)"/><circle cx="20" cy="24" r="3" fill="#fff"/></svg></div>
+        <div class="aws-service-name">DevNet &amp; Automatisation</div>
+        <div class="aws-service-desc">Automatisation réseau orientée développement : scripts Python pour administration, API REST Cisco DevNet. Configuration automatisée et gestion d'infrastructure as code.</div>
+        <div class="aws-service-tags"><span>Python</span><span>API REST</span><span>Cisco DevNet</span><span>Git</span></div>
+      </div>
+    </div>
+    <div class="cloud-flow-diagram aos d2">
+      <div class="cloud-flow-title">Architecture de l'environnement de travail — ISI Dakar &amp; Stage MLT SA</div>
+      <div class="cloud-flow">
+        <div class="cloud-flow-step"><div class="cloud-flow-node blue"><span>🖥</span></div><div class="cloud-flow-label">Serveur physique</div></div>
+        <div class="cloud-flow-arrow">→</div>
+        <div class="cloud-flow-step"><div class="cloud-flow-node green"><span>⚡</span></div><div class="cloud-flow-label">Proxmox / ESXi</div></div>
+        <div class="cloud-flow-arrow">→</div>
+        <div class="cloud-flow-step"><div class="cloud-flow-node purple"><span>🐧</span></div><div class="cloud-flow-label">VM Debian/NGINX</div></div>
+        <div class="cloud-flow-arrow">→</div>
+        <div class="cloud-flow-step"><div class="cloud-flow-node blue"><span>🪟</span></div><div class="cloud-flow-label">VM Windows/AD</div></div>
+        <div class="cloud-flow-arrow">→</div>
+        <div class="cloud-flow-step"><div class="cloud-flow-node orange"><span>📞</span></div><div class="cloud-flow-label">VM Asterisk</div></div>
+        <div class="cloud-flow-arrow">→</div>
+        <div class="cloud-flow-step"><div class="cloud-flow-node red"><span>🛡</span></div><div class="cloud-flow-label">pfSense FW</div></div>
+        <div class="cloud-flow-arrow">→</div>
+        <div class="cloud-flow-step"><div class="cloud-flow-node dark"><span>☁</span></div><div class="cloud-flow-label">Internet / WAN</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCS -->
+<section id="docs">
+  <div class="container">
+    <div class="aos">
+      <div class="section-label">DOCUMENTATION</div>
+      <h2 class="section-title">Configurations &amp;<br>Guides Techniques</h2>
+      <p class="section-sub">Extraits de configurations réelles utilisées lors des projets ISI et du stage MLT SA.</p>
+    </div>
+    <div class="docs-layout">
+      <div class="docs-sidebar aos d1">
+        <span class="docs-nav-label">pfSense / Réseau</span>
+        <button class="docs-nav-item active" onclick="showDoc('vlan',this)"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> pfSense VLAN</button>
+        <button class="docs-nav-item" onclick="showDoc('ad',this)"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3z"/></svg> Active Directory</button>
+        <span class="docs-nav-label">VoIP / Virtualisation</span>
+        <button class="docs-nav-item" onclick="showDoc('asterisk',this)"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Asterisk SIP</button>
+        <button class="docs-nav-item" onclick="showDoc('proxmox',this)"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H5v-2h8v2zm6-4H5v-2h14v2zm0-4H5V7h14v2z"/></svg> Proxmox VMs</button>
+        <span class="docs-nav-label">Téléchargements</span>
+        <button class="docs-nav-item" onclick="showDoc('downloads',this)"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg> Documents PDF</button>
+      </div>
+      <div class="docs-content aos d2">
+        <div class="docs-panel active" id="doc-vlan">
+          <div class="docs-panel-title">pfSense — Configuration VLAN &amp; Portail captif</div>
+          <p class="docs-panel-desc">Configuration des VLANs et du portail captif pfSense. Basé sur le projet réalisé à l'ISI Dakar.</p>
+          <div class="code-block">
+            <div class="code-header"><span class="code-lang">pfsense / shell</span><button class="code-copy-btn" onclick="copyCode(this)">Copier</button></div>
+<pre class="code-body"><span class="c"># ── Configuration VLAN sur pfSense ──</span>
+<span class="c"># Interfaces > Assignments > VLANs</span>
+
+<span class="c"># VLAN 10 — Administration (AD/GPO)</span>
+<span class="f">vlan</span> <span class="n">10</span>  parent=<span class="s">em1</span>  description=<span class="s">"VLAN-Admin"</span>
+<span class="f">subnet</span>: <span class="n">192.168.10.0/26</span>  gw: <span class="n">192.168.10.1</span>
+
+<span class="c"># VLAN 20 — Serveurs / Proxmox</span>
+<span class="f">vlan</span> <span class="n">20</span>  parent=<span class="s">em1</span>  description=<span class="s">"VLAN-Serveurs"</span>
+<span class="f">subnet</span>: <span class="n">192.168.20.0/27</span>  gw: <span class="n">192.168.20.1</span>
+
+<span class="c"># VLAN 30 — Opérations / Téléphonie IP</span>
+<span class="f">vlan</span> <span class="n">30</span>  parent=<span class="s">em1</span>  description=<span class="s">"VLAN-Ops"</span>
+<span class="f">subnet</span>: <span class="n">192.168.30.0/25</span>  gw: <span class="n">192.168.30.1</span>
+
+<span class="c"># VLAN 40 — Wi-Fi invités (portail captif)</span>
+<span class="f">vlan</span> <span class="n">40</span>  parent=<span class="s">em1</span>  description=<span class="s">"VLAN-WiFi"</span>
+<span class="f">subnet</span>: <span class="n">192.168.40.0/24</span>  gw: <span class="n">192.168.40.1</span>
+
+<span class="c"># ── Portail captif (Services > Captive Portal) ──</span>
+<span class="k">interface</span>    = <span class="v">VLAN40</span>
+<span class="k">max_procs</span>    = <span class="n">16</span>
+<span class="k">timeout</span>      = <span class="n">120</span>   <span class="c"># minutes</span>
+<span class="k">idle_timeout</span> = <span class="n">30</span>    <span class="c"># minutes</span>
+<span class="k">auth_method</span>  = <span class="s">local</span>
+<span class="k">logout_win</span>   = <span class="v">enabled</span>
+
+<span class="c"># ── Règles Firewall inter-VLAN ──</span>
+<span class="k">action</span>=block  <span class="k">src</span>=<span class="n">192.168.40.0/24</span>  <span class="k">dst</span>=<span class="n">192.168.10.0/26</span>
+<span class="k">action</span>=block  <span class="k">src</span>=<span class="n">192.168.40.0/24</span>  <span class="k">dst</span>=<span class="n">192.168.20.0/27</span>
+<span class="k">action</span>=pass   <span class="k">src</span>=<span class="n">192.168.40.0/24</span>  <span class="k">dst</span>=<span class="s">any</span>  <span class="k">port</span>=<span class="n">80,443</span>
+</pre>
+          </div>
+        </div>
+        <div class="docs-panel" id="doc-ad">
+          <div class="docs-panel-title">Active Directory — PowerShell &amp; GPO</div>
+          <p class="docs-panel-desc">Scripts PowerShell utilisés pour l'administration AD et le déploiement Windows 11 lors du projet ISI.</p>
+          <div class="code-block">
+            <div class="code-header"><span class="code-lang">powershell</span><button class="code-copy-btn" onclick="copyCode(this)">Copier</button></div>
+<pre class="code-body"><span class="c"># ── Active Directory — PowerShell ──</span>
+
+<span class="c"># Création des unités d'organisation</span>
+<span class="f">New-ADOrganizationalUnit</span> -Name <span class="s">"Direction"</span> `
+  -Path <span class="s">"DC=mltsalab,DC=local"</span>
+
+<span class="f">New-ADOrganizationalUnit</span> -Name <span class="s">"Employes"</span> `
+  -Path <span class="s">"DC=mltsalab,DC=local"</span>
+
+<span class="f">New-ADOrganizationalUnit</span> -Name <span class="s">"IT-Admin"</span> `
+  -Path <span class="s">"DC=mltsalab,DC=local"</span>
+
+<span class="c"># Création d'un utilisateur</span>
+<span class="f">New-ADUser</span> `
+  -Name              <span class="s">"Mamadou Seck"</span> `
+  -SamAccountName    <span class="s">"mseck"</span> `
+  -UserPrincipalName <span class="s">"mseck@mltsalab.local"</span> `
+  -Path              <span class="s">"OU=IT-Admin,DC=mltsalab,DC=local"</span> `
+  -AccountPassword   (ConvertTo-SecureString <span class="s">"P@ss2025!"</span> -AsPlainText -Force) `
+  -Enabled           <span class="v">$true</span>
+
+<span class="c"># GPO — Sécurisation des postes</span>
+<span class="f">New-GPO</span> -Name <span class="s">"GPO-Securite-Win11"</span>
+
+<span class="c"># Bloquer changement fond d'écran</span>
+<span class="f">Set-GPRegistryValue</span> -Name <span class="s">"GPO-Securite-Win11"</span> `
+  -Key       <span class="s">"HKCU\Software\Policies\Microsoft\Windows\Personalization"</span> `
+  -ValueName <span class="s">"NoChangingWallPaper"</span> -Type DWord -Value <span class="n">1</span>
+
+<span class="c"># Lier GPO à l'OU Employés</span>
+<span class="f">New-GPLink</span> -Name <span class="s">"GPO-Securite-Win11"</span> `
+  -Target   <span class="s">"OU=Employes,DC=mltsalab,DC=local"</span> `
+  -Enforced <span class="v">Yes</span>
+</pre>
+          </div>
+        </div>
+        <div class="docs-panel" id="doc-asterisk">
+          <div class="docs-panel-title">Asterisk — Configuration SIP &amp; Dial Plan</div>
+          <p class="docs-panel-desc">Fichiers de configuration Asterisk créés lors du projet téléphonie IP sous Debian 12.</p>
+          <div class="code-block">
+            <div class="code-header"><span class="code-lang">asterisk-config</span><button class="code-copy-btn" onclick="copyCode(this)">Copier</button></div>
+<pre class="code-body"><span class="c">; ── /etc/asterisk/sip.conf ──</span>
+[general]
+<span class="k">context</span>   = <span class="s">default</span>
+<span class="k">bindport</span>  = <span class="n">5060</span>
+<span class="k">bindaddr</span>  = <span class="n">0.0.0.0</span>
+<span class="k">language</span>  = <span class="s">fr</span>
+
+<span class="c">; Poste 101 — Direction</span>
+[<span class="v">101</span>]
+<span class="k">type</span>      = <span class="s">friend</span>
+<span class="k">secret</span>    = <span class="s">pass101</span>
+<span class="k">context</span>   = <span class="s">internal</span>
+<span class="k">host</span>      = <span class="s">dynamic</span>
+<span class="k">callerid</span>  = <span class="s">"Direction" &lt;101&gt;</span>
+<span class="k">canreinvite</span> = <span class="v">no</span>
+
+<span class="c">; Poste 102 — Opérations</span>
+[<span class="v">102</span>]
+<span class="k">type</span>      = <span class="s">friend</span>
+<span class="k">secret</span>    = <span class="s">pass102</span>
+<span class="k">context</span>   = <span class="s">internal</span>
+<span class="k">host</span>      = <span class="s">dynamic</span>
+<span class="k">callerid</span>  = <span class="s">"Operations" &lt;102&gt;</span>
+
+<span class="c">; Poste 103 — IT Admin</span>
+[<span class="v">103</span>]
+<span class="k">type</span>      = <span class="s">friend</span>
+<span class="k">secret</span>    = <span class="s">pass103</span>
+<span class="k">context</span>   = <span class="s">internal</span>
+<span class="k">host</span>      = <span class="s">dynamic</span>
+<span class="k">callerid</span>  = <span class="s">"IT-Admin" &lt;103&gt;</span>
+
+<span class="c">; ── /etc/asterisk/extensions.conf ──</span>
+[<span class="v">internal</span>]
+<span class="k">exten</span> => <span class="n">101</span>,<span class="n">1</span>,<span class="f">Dial</span>(SIP/<span class="v">101</span>,<span class="n">20</span>)
+<span class="k">exten</span> => <span class="n">101</span>,<span class="n">2</span>,<span class="f">VoiceMail</span>(<span class="v">101</span>@default)
+<span class="k">exten</span> => <span class="n">102</span>,<span class="n">1</span>,<span class="f">Dial</span>(SIP/<span class="v">102</span>,<span class="n">20</span>)
+<span class="k">exten</span> => <span class="n">102</span>,<span class="n">2</span>,<span class="f">VoiceMail</span>(<span class="v">102</span>@default)
+<span class="k">exten</span> => <span class="n">103</span>,<span class="n">1</span>,<span class="f">Dial</span>(SIP/<span class="v">103</span>,<span class="n">20</span>)
+<span class="c">; Messagerie vocale (*98)</span>
+<span class="k">exten</span> => <span class="n">*98</span>,<span class="n">1</span>,<span class="f">VoiceMailMain</span>(${<span class="v">CALLERID(num)</span>}@default)
+</pre>
+          </div>
+        </div>
+        <div class="docs-panel" id="doc-proxmox">
+          <div class="docs-panel-title">Proxmox VE — Déploiement VMs CLI</div>
+          <p class="docs-panel-desc">Commandes Proxmox CLI pour créer et gérer les VMs du projet de virtualisation ISI.</p>
+          <div class="code-block">
+            <div class="code-header"><span class="code-lang">proxmox / bash</span><button class="code-copy-btn" onclick="copyCode(this)">Copier</button></div>
+<pre class="code-body"><span class="c"># ── Proxmox VE — Administration CLI ──</span>
+
+<span class="c"># Créer VM Debian 12 (NGINX + Asterisk)</span>
+<span class="f">qm create</span> <span class="n">101</span> \
+  --name   <span class="s">vm-debian-nginx</span> \
+  --memory <span class="n">2048</span>  --cores <span class="n">2</span> \
+  --net0   <span class="s">virtio,bridge=vmbr0,tag=20</span> \
+  --ide2   <span class="s">local:iso/debian-12.iso,media=cdrom</span> \
+  --scsi0  <span class="s">local-lvm:20</span>  --boot <span class="s">order=ide2</span>
+
+<span class="c"># Créer VM Windows Server 2022 (AD/GPO)</span>
+<span class="f">qm create</span> <span class="n">103</span> \
+  --name   <span class="s">vm-winserver-ad</span> \
+  --memory <span class="n">4096</span>  --cores <span class="n">4</span> \
+  --net0   <span class="s">virtio,bridge=vmbr0,tag=10</span> \
+  --ide2   <span class="s">local:iso/win2022.iso,media=cdrom</span> \
+  --scsi0  <span class="s">local-lvm:60</span>  --ostype <span class="s">win11</span>
+
+<span class="c"># Créer VM Ubuntu 22.04 (WAMP + MySQL)</span>
+<span class="f">qm create</span> <span class="n">102</span> \
+  --name   <span class="s">vm-ubuntu-wamp</span> \
+  --memory <span class="n">4096</span>  --cores <span class="n">2</span> \
+  --net0   <span class="s">virtio,bridge=vmbr0,tag=20</span> \
+  --ide2   <span class="s">local:iso/ubuntu-22.04.iso,media=cdrom</span> \
+  --scsi0  <span class="s">local-lvm:30</span>
+
+<span class="c"># Snapshot avant modification</span>
+<span class="f">qm snapshot</span> <span class="n">101</span> <span class="s">snap-avant-nginx</span> \
+  --description <span class="s">"Avant installation NGINX"</span>
+
+<span class="c"># Démarrer toutes les VMs</span>
+<span class="k">for</span> id <span class="k">in</span> <span class="n">101 102 103 104</span>; <span class="k">do</span>
+  <span class="f">qm start</span> $id; <span class="k">done</span>
+
+<span class="c"># Lister VMs actives</span>
+<span class="f">qm list</span>
+</pre>
+          </div>
+        </div>
+        <div class="docs-panel" id="doc-downloads">
+          <div class="docs-panel-title">Documents Téléchargeables</div>
+          <p class="docs-panel-desc">CV, schémas réseau et documentation des projets disponibles en téléchargement.</p>
+          <div class="docs-download-list">
+            <div class="docs-download-item">
+              <div class="docs-download-icon">📄</div>
+              <div><div class="docs-download-name">CV — Mamadou Mansor Seck</div><div class="docs-download-meta">PDF · Étudiant L3 Réseaux · ISI Dakar · 2025</div></div>
+              <a href="assets/CV-Mamadou-Mansor-Seck.pdf" download class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.8rem;margin-left:auto;flex-shrink:0">↓ PDF</a>
+            </div>
+            <div class="docs-download-item">
+              <div class="docs-download-icon">🗺️</div>
+              <div><div class="docs-download-name">Topologie réseau — pfSense · VLAN · Asterisk</div><div class="docs-download-meta">PDF · Schéma complet · MLT SA / ISI</div></div>
+              <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.8rem;margin-left:auto;flex-shrink:0">↓ PDF</a>
+            </div>
+            <div class="docs-download-item">
+              <div class="docs-download-icon">📊</div>
+              <div><div class="docs-download-name">Plan d'adressage IP &amp; Tableau VLAN</div><div class="docs-download-meta">XLSX · 4 VLANs · pfSense · Proxmox · Asterisk</div></div>
+              <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.8rem;margin-left:auto;flex-shrink:0">↓ XLSX</a>
+            </div>
+            <div class="docs-download-item">
+              <div class="docs-download-icon">📦</div>
+              <div><div class="docs-download-name">Configurations pfSense + Asterisk + Proxmox</div><div class="docs-download-meta">ZIP · Fichiers de configuration exportés</div></div>
+              <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.8rem;margin-left:auto;flex-shrink:0">↓ ZIP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="aos">
+      <div class="section-label">CONTACT</div>
+      <h2 class="section-title">Me Contacter</h2>
+      <p class="section-sub">Disponible pour un stage, une alternance ou toute opportunité en réseaux, systèmes ou cybersécurité à Dakar et au-delà.</p>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info aos d1">
+        <div class="contact-social">
+          <a href="tel:+221772285452" class="contact-social-item">
+            <div class="contact-social-icon" style="background:#e8f1fd"><svg viewBox="0 0 24 24" fill="#0461C5" width="20" height="20"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+            <div><div class="contact-social-label">Téléphone</div><div class="contact-social-value">+221 77 228 54 52</div></div>
+          </a>
+          <a href="mailto:mohamedseck163@gmail.com" class="contact-social-item">
+            <div class="contact-social-icon" style="background:#e8f1fd"><svg viewBox="0 0 24 24" fill="#0461C5" width="20" height="20"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div><div class="contact-social-label">Email</div><div class="contact-social-value">mohamedseck163@gmail.com</div></div>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-social-item">
+            <div class="contact-social-icon" style="background:#e8f1fd"><svg viewBox="0 0 24 24" fill="#0461C5" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+            <div><div class="contact-social-label">LinkedIn</div><div class="contact-social-value">Mamadou Mansor Seck</div></div>
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-social-item">
+            <div class="contact-social-icon" style="background:#f3f0ff"><svg viewBox="0 0 24 24" fill="#333" width="20" height="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></div>
+            <div><div class="contact-social-label">GitHub</div><div class="contact-social-value">github.com/mms-netinfra</div></div>
+          </a>
+          <div class="contact-social-item">
+            <div class="contact-social-icon" style="background:#fff3e0"><svg viewBox="0 0 24 24" fill="#e65100" width="20" height="20"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div><div class="contact-social-label">Localisation</div><div class="contact-social-value">Yeumbeul Cité Comico, Dakar, Sénégal</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form aos d2">
+        <div class="form-title">Envoyer un message</div>
+        <div class="form-group"><label class="form-label">Nom complet</label><input type="text" class="form-input" id="fname" placeholder="Votre nom"></div>
+        <div class="form-group"><label class="form-label">Adresse email</label><input type="email" class="form-input" id="femail" placeholder="votre@email.com"></div>
+        <div class="form-group"><label class="form-label">Sujet</label><input type="text" class="form-input" id="fsubject" placeholder="Stage, opportunité, collaboration..."></div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" id="fmessage" placeholder="Décrivez votre demande..."></textarea></div>
+        <div class="form-alert" id="form-alert"></div>
+        <button class="btn btn-primary form-submit" id="form-btn" onclick="submitForm()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          Envoyer le message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="#fff" width="18" height="18"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.237 4.237 0 00-6 0zm-4-4l2 2a7.074 7.074 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg></div>
+          <span class="footer-logo-text">Mamadou Mansor Seck</span>
+        </div>
+        <p class="footer-brand-desc">Étudiant L3 Réseaux Informatiques · ISI Dakar · Passionné par l'infrastructure réseau, la cybersécurité et la virtualisation.</p>
+        <div class="footer-techs">
+          <span class="footer-tech">pfSense</span><span class="footer-tech">VLAN</span><span class="footer-tech">Proxmox</span>
+          <span class="footer-tech">Asterisk</span><span class="footer-tech">AD/GPO</span><span class="footer-tech">GNS3</span><span class="footer-tech">Docker</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#about">À propos</a></li><li><a href="#projects">Projets</a></li>
+          <li><a href="#topology">Topologies</a></li><li><a href="#security">Sécurité</a></li>
+          <li><a href="#cloud">Cloud &amp; Virt.</a></li><li><a href="#docs">Documentation</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Technologies</div>
+        <ul class="footer-links">
+          <li><a href="#">pfSense / OPNsense</a></li><li><a href="#">Proxmox VE / ESXi</a></li>
+          <li><a href="#">Windows Server / AD</a></li><li><a href="#">Asterisk / VoIP SIP</a></li>
+          <li><a href="#">GNS3 / EVE-NG</a></li><li><a href="#">Docker / Linux</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Formation</div>
+        <ul class="footer-links">
+          <li><a href="#">CCNA1 Cisco (obtenu)</a></li>
+          <li><a href="#">L3 Réseaux ISI Dakar</a></li>
+          <li><a href="#">BT Informatique MIFFIT</a></li>
+          <li><a href="#">Stage MLT SA — 2025</a></li>
+          <li><a href="#">CCNA2 (objectif 2026)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2025 Mamadou Mansor Seck · Étudiant L3 Réseaux Informatiques · ISI Dakar, Sénégal · mohamedseck163@gmail.com</span>
+      <div class="footer-socials">
+        <a href="tel:+221772285452" class="footer-social"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
+        <a href="mailto:mohamedseck163@gmail.com" class="footer-social"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+        <a href="https://linkedin.com" target="_blank" class="footer-social"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://github.com" target="_blank" class="footer-social"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
